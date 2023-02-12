@@ -1,0 +1,35 @@
+*{
+  font-family:"Roboto Condensed";
+}
+h5{
+  font-family: Georgia, serif;
+  font-size: xx-large;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+h6{
+  font-family: Georgia, serif;
+  font-size: x-large;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ /*   color: red;*/
+  }
+
+  
