@@ -1,0 +1,29 @@
+{
+  "categorias": [
+    {
+      "nombre": "Muebles de Jardín",
+      "items": [
+        { "nombre": "Juegos de Jardín" },
+        { "nombre": "Bebederos de aves" },
+        { "nombre": "Arrollamangueras" }
+      ]
+    },
+    {
+      "nombre": "Decoración",
+      "items": [
+        { "nombre": "Faroles" },
+        { "nombre": "Campanas" }
+      ]
+    },
+    {
+      "nombre": "Para la parrilla",
+      "items": [
+        { "nombre": "Atizadores" },
+        { "nombre": "Provoleteras" },
+        { "nombre": "Planchas" }
+      ]
+    }
+
+    
+  ]
+}
