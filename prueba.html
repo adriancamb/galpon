@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Generando código HTML dinámicamente desde una base de datos SQLite</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi sitio web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+
+                    <script>
+// Conectarse a la base de datos SQLite
+console.log("mensaje1")
+const db = openDatabase('./sqlite/galpon.db', '1.0', 'Mi base de datos', 2 * 1024 * 1024);
+
+// Obtener los datos de la tabla categorias
+console.log("mensaje2")
+db.transaction(function(tx) {
+    tx.executeSql('SELECT * FROM categorias;', [], function(tx, results) {
+        // Generar dinámicamente el código HTML para las categorías
+        let categoriasHtml = '';
+        console.log("mensaje3")
+        for (let i = 0; i < results.rows.length; i++) {
+            let categoria = results.rows.item(i);
+            let productosHtml = '';
+            
+            // Obtener los productos de la categoría
+            db.transaction(function(tx) {
+                tx.executeSql(`SELECT * FROM productos WHERE idCategoria = ${categoria.id}`, [], function(tx, results) {
+                    // Generar dinámicamente el código HTML para los productos
+                    for (let j = 0; j < results.rows.length; j++) {
+                        let producto = results.rows.item(j);
+                        productosHtml += `
+                            <li><a class="dropdown-item" href="${producto.url}">${producto.nombre}</a></li>
+                        `;
+                    }
+
+                    // Generar el código HTML para la categoría
+                    categoriasHtml += `
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">${categoria.nombre}</a>
+                            <ul class="dropdown-menu">
+                                ${productosHtml}
+                            </ul>
+                        </li>
+                    `;
+
+                    // Insertar el código HTML generado en el documento HTML
+                    document.querySelector('.navbar-nav').innerHTML += categoriasHtml;
+                });
+            });
+        }
+    });
+});
+
+                  </script>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</body>
+</html>
