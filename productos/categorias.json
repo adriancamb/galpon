@@ -1,30 +1,252 @@
 {
-  "categorias": [
-    {
-      "nombre": "Muebles de Jardín",
-      "url": "muebles-de-jardin.html",
-      "productos": [
-        { "nombre": "Juegos de Jardín", "url": "juegos-de-jardin.html"},
-        { "nombre": "Bebederos de aves", "url": "bebederos-de-aves.html"},
-        { "nombre": "Arrollamangueras", "url": "arrollamangueras.html"}
-      ]
-    },
-    {
-      "nombre": "Decoración",
-      "url": "decoracion.html",
-      "productos": [
-        { "nombre": "Faroles", "url": "faroles.html" },
-        { "nombre": "Campanas", "url": "campanas.html" }
-      ]
-    },
-    {
-      "nombre": "Para la parrilla",
-      "url": "para-la-parrilla.html",
-      "productos": [
-        { "nombre": "Atizadores", "url": "atizadores.html" },
-        { "nombre": "Provoleteras", "url": "provoleteras.html" },
-        { "nombre": "Planchas", "url": "planchas.html" }
-      ]
-    }
-  ]
+    "categorias": [
+        {
+            "nombre": "Jardín",
+            "url": "jardin.html",
+            "productos": [
+                {
+                    "nombre": "Arrollamangueras",
+                    "url": "arrollamangueras.html"
+                },
+                {
+                    "nombre": "Bebederos",
+                    "url": "bebederos.html"
+                },
+                {
+                    "nombre": "Llamadores",
+                    "url": "llamadores.html"
+                },
+                {
+                    "nombre": "Veletas",
+                    "url": "veletas.html"
+                },
+                {
+                    "nombre": "Muebles de Jardín",
+                    "url": "muebles-de-jardin.html",
+                    "subproductos": [
+                        {
+                            "nombre": "Fundición de aluminio",
+                            "url": "fundicion-de-aluminio.html"
+                        },
+                        {
+                            "nombre": "Función de hierro",
+                            "url": "funcion-de-hierro.html"
+                        },
+                        {
+                            "nombre": "Hierro forjado",
+                            "url": "hierro-forjado.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Parrillas",
+            "url": "parrillas.html",
+            "productos": [
+                {
+                    "nombre": "Accesorios para parrillas",
+                    "url": "accesorios-para-parrillas.html"
+                },
+                {
+                    "nombre": "Asadores",
+                    "url": "asadores.html"
+                },
+                {
+                    "nombre": "Herrajes",
+                    "url": "herrajes.html"
+                },
+                {
+                    "nombre": "Parrillas a carbón o leña",
+                    "url": "parrillas-a-carbon-o-lena.html"
+                },
+                {
+                    "nombre": "Parrillas a gas",
+                    "url": "parrillas-a-gas.html"
+                }
+            ]
+        },
+        {
+            "nombre": "Calefacción",
+            "url": "calefaccion.html",
+            "productos": [
+                {
+                    "nombre": "Hogares",
+                    "url": "hogares.html",
+                    "productos": [
+                        {
+                            "nombre": "Accesorios para hogares",
+                            "url": "accesorios-para-hogares.html"
+                        },
+                        {
+                            "nombre": "Salamandras",
+                            "url": "salamandras.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Iluminación",
+            "url": "iluminacion.html",
+            "productos": [
+                {
+                    "nombre": "Faroles",
+                    "url": "faroles.html"
+                },
+                {
+                    "nombre": "Faroles con columnas",
+                    "url": "faroles-con-columnas.html"
+                }
+            ]
+        },
+        {
+            "nombre": "Gastronomía",
+            "url": "gastronomia.html",
+            "productos": [
+                {
+                    "nombre": "Calderos en hierro",
+                    "url": "calderos-en-hierro.html"
+                },
+                {
+                    "nombre": "Cacerolas de fundición",
+                    "url": "cacerolas-de-fundicion.html",
+                    "subproductos": [
+                        {
+                            "nombre": "Enlozadas",
+                            "url": "enlozadas.html"
+                        },
+                        {
+                            "nombre": "Sin enlozar",
+                            "url": "enlozadas.html",
+                            "subproductos": [
+                                {
+                                    "nombre": "Ovaladas",
+                                    "url": "ovaladas.html",
+                                    "subproductos": [
+                                        {
+                                            "nombre": "Doble función",
+                                            "url": "doble-funcion.html"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Planchas para bifes",
+                    "url": "planchas-para-bifes.html",
+                    "subproductos": [
+                        {
+                            "nombre": "Lisas",
+                            "url": "lisas.html"
+                        },
+                        {
+                            "nombre": "Rayadas",
+                            "url": "rayadas.html",
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlozadas",
+                                    "url": "enlozadas.html"
+                                },
+                                {
+                                    "nombre": "Sin enlozar",
+                                    "url": "sin-enlozar.html"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Provoleteras de fundición",
+                    "url": "provoleteras.html",
+                    "subproductos": [
+                        {
+                            "nombre": "Mango de madera",
+                            "url": "mango-de-madera.html",
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlozadas",
+                                    "url": "enlozadas.html"
+                                },
+                                {
+                                    "nombre": "Sin enlozar",
+                                    "url": "sin-enlozar.html"
+                                }
+                            ]
+                        },
+                        {
+                            "nombre": "Mango de fundición",
+                            "url": "mango-de-fundicion.html",
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlozadas",
+                                    "url": "enlozadas.html"
+                                },
+                                {
+                                    "nombre": "Sin enlozar",
+                                    "url": "sin-enlozar.html"
+                                }
+                            ]
+                        },
+                        {
+                            "nombre": "De 15 porciones",
+                            "url": "15-porciones.html",
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlozadas",
+                                    "url": "enlozadas.html"
+                                },
+                                {
+                                    "nombre": "Sin enlozar",
+                                    "url": "sin-enlozar.html"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Asaderas en chapa plegada",
+                    "url": "asaderas-en-chapa-plegada.html"
+                },
+                {
+                    "nombre": "Paelleras con 2 asas",
+                    "url": "paelleras-con-2-asas.html",
+                    "subproductos": [
+                        {
+                            "nombre": "Enlozadas",
+                            "url": "enlozadas.html"
+                        },
+                        {
+                            "nombre": "Sin enlozar",
+                            "url": "sin-enlozar.html"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Woks",
+                    "url": "woks.html",
+                    "subproductos": [
+                        {
+                            "nombre": "Enlozadas",
+                            "url": "enlozadas.html"
+                        },
+                        {
+                            "nombre": "Sin enlozar",
+                            "url": "sin-enlozar.html"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Sartén mango de planchuela",
+                    "url": "sarten-mango-de-planchuela.html"
+                },
+                {
+                    "nombre": "Pizzera en chapa enlozada",
+                    "url": "pizzera-en-chapa-enlozada.html"
+                }
+            ]
+        }
+    ]
 }

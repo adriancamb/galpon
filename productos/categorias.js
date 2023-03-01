@@ -33,12 +33,53 @@ fetch('../productos/categorias.json')
 
         itemLista.appendChild(linkItem);
         listaproductos.appendChild(itemLista);
-      });
 
+        // Agrega los subproductos para el producto actual
+        if (item.subproductos) {
+          const subproductosLista = document.createElement('ul');
+          subproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
+
+          item.subproductos.forEach(subproducto => {
+            const subproductoLista = document.createElement('li');
+            const subproductoLink = document.createElement('a');
+            subproductoLink.classList.add('dropdown-item');
+            subproductoLink.href = subproducto.url;
+            subproductoLink.textContent = subproducto.nombre;
+
+            subproductoLista.appendChild(subproductoLink);
+
+            // Agrega los sub-subproductos para el subproducto actual
+            if (subproducto.subproductos) {
+              const subsubproductosLista = document.createElement('ul');
+              subsubproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
+
+              subproducto.subproductos.forEach(subsubproducto => {
+                const subsubproductoLista = document.createElement('li');
+                const subsubproductoLink = document.createElement('a');
+                subsubproductoLink.classList.add('dropdown-item');
+                subsubproductoLink.href = subsubproducto.url;
+                subsubproductoLink.textContent = subsubproducto.nombre;
+
+                subsubproductoLista.appendChild(subsubproductoLink);
+                subsubproductosLista.appendChild(subsubproductoLista);
+              });
+
+              subproductoLista.classList.add('dropdown-submenu');
+              subproductoLista.appendChild(subsubproductosLista);
+            }
+
+            subproductosLista.appendChild(subproductoLista);
+          });
+
+          itemLista.classList.add('dropdown-submenu');
+          itemLista.appendChild(subproductosLista);
+        }
+      });
 
       // Agrega los elementos a la página
       itemCategoria.appendChild(linkCategoria);
       itemCategoria.appendChild(listaproductos);
       contenedor.appendChild(itemCategoria);
+      console.log(contenedor.innerHTML);
     });
   });
