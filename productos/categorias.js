@@ -80,6 +80,6 @@ fetch('../productos/categorias.json')
       itemCategoria.appendChild(linkCategoria);
       itemCategoria.appendChild(listaproductos);
       contenedor.appendChild(itemCategoria);
-      console.log(contenedor.innerHTML);
+     // console.log(contenedor.innerHTML);
     });
   });
