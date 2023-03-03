@@ -39,42 +39,64 @@ fetch('../productos/categorias.json')
           const subproductosLista = document.createElement('ul');
           subproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
 
-          item.subproductos.forEach(subproducto => {
-            const subproductoLista = document.createElement('li');
-            const subproductoLink = document.createElement('a');
-            subproductoLink.classList.add('dropdown-item');
-            subproductoLink.href = subproducto.url;
-            subproductoLink.textContent = subproducto.nombre;
+ item.subproductos.forEach(subproducto => {
+      const subproductoLista = document.createElement('li');
+      const subproductoLink = document.createElement('a');
+      subproductoLink.classList.add('dropdown-item');
+      subproductoLink.href = subproducto.url;
+      subproductoLink.textContent = subproducto.nombre;
 
-            subproductoLista.appendChild(subproductoLink);
+      subproductoLista.appendChild(subproductoLink);
 
-            // Agrega los sub-subproductos para el subproducto actual
-            if (subproducto.subproductos) {
-              const subsubproductosLista = document.createElement('ul');
-              subsubproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
+      // Agrega los sub-subproductos para el subproducto actual
+      if (subproducto.subproductos) {
+        const subsubproductosLista = document.createElement('ul');
+        subsubproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
 
-              subproducto.subproductos.forEach(subsubproducto => {
-                const subsubproductoLista = document.createElement('li');
-                const subsubproductoLink = document.createElement('a');
-                subsubproductoLink.classList.add('dropdown-item');
-                subsubproductoLink.href = subsubproducto.url;
-                subsubproductoLink.textContent = subsubproducto.nombre;
+        subproducto.subproductos.forEach(subsubproducto => {
+          const subsubproductoLista = document.createElement('li');
+          const subsubproductoLink = document.createElement('a');
+          subsubproductoLink.classList.add('dropdown-item');
+          subsubproductoLink.href = subsubproducto.url;
+          subsubproductoLink.textContent = subsubproducto.nombre;
 
-                subsubproductoLista.appendChild(subsubproductoLink);
-                subsubproductosLista.appendChild(subsubproductoLista);
-              });
+          subsubproductoLista.appendChild(subsubproductoLink);
 
-              subproductoLista.classList.add('dropdown-submenu');
-              subproductoLista.appendChild(subsubproductosLista);
-            }
+          // Agrega los sub-sub-subproductos para el sub-subproducto actual
+          if (subsubproducto.subproductos) {
+            const subsubsubproductosLista = document.createElement('ul');
+            subsubsubproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
 
-            subproductosLista.appendChild(subproductoLista);
-          });
+            subsubproducto.subproductos.forEach(subsubsubproducto => {
+              const subsubsubproductoLista = document.createElement('li');
+              const subsubsubproductoLink = document.createElement('a');
+              subsubsubproductoLink.classList.add('dropdown-item');
+              subsubsubproductoLink.href = subsubsubproducto.url;
+              subsubsubproductoLink.textContent = subsubsubproducto.nombre;
 
-          itemLista.classList.add('dropdown-submenu');
-          itemLista.appendChild(subproductosLista);
-        }
-      });
+              subsubsubproductoLista.appendChild(subsubsubproductoLink);
+              subsubsubproductosLista.appendChild(subsubsubproductoLista);
+            });
+
+            subsubproductoLista.classList.add('dropdown-submenu');
+            subsubproductoLista.appendChild(subsubsubproductosLista);
+          }
+          //
+          subsubproductosLista.appendChild(subsubproductoLista);
+        });
+
+        subproductoLista.classList.add('dropdown-submenu');
+        subproductoLista.appendChild(subsubproductosLista);
+      }
+
+      subproductosLista.appendChild(subproductoLista);
+    });
+
+    itemLista.classList.add('dropdown-submenu');
+    itemLista.appendChild(subproductosLista);
+  }
+});
+
 
       // Agrega los elementos a la página
       itemCategoria.appendChild(linkCategoria);

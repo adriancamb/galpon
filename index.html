@@ -29,45 +29,49 @@ git pull https://github.com/adriancamb/galpon.git
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El galpón de Mario</title>
- 
 
-  <link rel="stylesheet" href="./styles.css"/>
+
+  <link rel="stylesheet" href="./styles.css" />
   <!-- 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
  -->
 
   <link href="./styles/style.css" rel="stylesheet">
 
- 
+
   <link href="./styles/_reboot.scss" rel="stylesheet">
-  
+
 </head>
+
 <body style="background-color: white">
 
-<main>
+  <main>
 
-<div class="container">
+    <div class="container">
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
+            aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-      <a class="navbar-brand col-lg-3 me-0" href="#" style="padding:0px"><img src="./img/logo.gif" height="60" alt="";> </a>
-      <div id="nav-container"></div>
+          <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+            <a class="navbar-brand col-lg-3 me-0" href="#" style="padding:0px"><img src="./img/logo.gif" height="60"
+                alt="" ;> </a>
+            <div id="nav-container"></div>
 
 
-      <ul id= "json" class="navbar-nav col-lg-6 justify-content-lg-center">
+            <ul id="json" class="navbar-nav col-lg-6 justify-content-lg-center">
 
-        
-      <!--  
+
+              <!--  
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Muebles de Jardín</a>
           <ul class="dropdown-menu">
@@ -93,175 +97,179 @@ git pull https://github.com/adriancamb/galpon.git
         </li>
         -->
 
-        <!-- Incluye jQuery para hacer la solicitud AJAX para leer las categorías desde el json -->
+              <!-- Incluye jQuery para hacer la solicitud AJAX para leer las categorías desde el json -->
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+              <script src="/productos/categorias.js"></script>
 
 
-
- <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="jardin.html" data-bs-toggle="dropdown" aria-expanded="false">Jardín</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="arrollamangueras.html">Arrollamangueras</a></li><li><a class="dropdown-item" href="bebederos.html">Bebederos</a></li><li><a class="dropdown-item" href="llamadores.html">Llamadores</a></li><li><a class="dropdown-item" href="veletas.html">Veletas</a></li><li class="dropdown-submenu"><a class="dropdown-item" href="muebles-de-jardin.html">Muebles de Jardín</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="fundicion-de-aluminio.html">Fundición de aluminio</a></li><li><a class="dropdown-item" href="funcion-de-hierro.html">Función de hierro</a></li><li><a class="dropdown-item" href="hierro-forjado.html">Hierro forjado</a></li></ul></li></ul></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="parrillas.html" data-bs-toggle="dropdown" aria-expanded="false">Parrillas</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="accesorios-para-parrillas.html">Accesorios para parrillas</a></li><li><a class="dropdown-item" href="asadores.html">Asadores</a></li><li><a class="dropdown-item" href="herrajes.html">Herrajes</a></li><li><a class="dropdown-item" href="parrillas-a-carbon-o-lena.html">Parrillas a carbón o leña</a></li><li><a class="dropdown-item" href="parrillas-a-gas.html">Parrillas a gas</a></li></ul></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="calefaccion.html" data-bs-toggle="dropdown" aria-expanded="false">Calefacción</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="hogares.html">Hogares</a></li></ul></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="iluminacion.html" data-bs-toggle="dropdown" aria-expanded="false">Iluminación</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="faroles.html">Faroles</a></li><li><a class="dropdown-item" href="faroles-con-columnas.html">Faroles con columnas</a></li></ul></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="gastronomia.html" data-bs-toggle="dropdown" aria-expanded="false">Gastronomía</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="calderos-en-hierro.html">Calderos en hierro</a></li><li class="dropdown-submenu"><a class="dropdown-item" href="cacerolas-de-fundicion.html">Cacerolas de fundición</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="enlozadas.html">Enlozadas</a></li><li class="dropdown-submenu"><a class="dropdown-item" href="enlozadas.html">Sin enlozar</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="ovaladas.html">Ovaladas</a></li></ul></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item" href="planchas-para-bifes.html">Planchas para bifes</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="lisas.html">Lisas</a></li><li class="dropdown-submenu"><a class="dropdown-item" href="rayadas.html">Rayadas</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="enlozadas.html">Enlozadas</a></li><li><a class="dropdown-item" href="sin-enlozar.html">Sin enlozar</a></li></ul></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item" href="provoleteras.html">Provoleteras de fundición</a><ul class="dropdown-menu dropdown-submenu"><li class="dropdown-submenu"><a class="dropdown-item" href="mango-de-madera.html">Mango de madera</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="enlozadas.html">Enlozadas</a></li><li><a class="dropdown-item" href="sin-enlozar.html">Sin enlozar</a></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item" href="mango-de-fundicion.html">Mango de fundición</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="enlozadas.html">Enlozadas</a></li><li><a class="dropdown-item" href="sin-enlozar.html">Sin enlozar</a></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item" href="15-porciones.html">De 15 porciones</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="enlozadas.html">Enlozadas</a></li><li><a class="dropdown-item" href="sin-enlozar.html">Sin enlozar</a></li></ul></li></ul></li><li><a class="dropdown-item" href="asaderas-en-chapa-plegada.html">Asaderas en chapa plegada</a></li><li class="dropdown-submenu"><a class="dropdown-item" href="paelleras-con-2-asas.html">Paelleras con 2 asas</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="enlozadas.html">Enlozadas</a></li><li><a class="dropdown-item" href="sin-enlozar.html">Sin enlozar</a></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item" href="woks.html">Woks</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item" href="enlozadas.html">Enlozadas</a></li><li><a class="dropdown-item" href="sin-enlozar.html">Sin enlozar</a></li></ul></li><li><a class="dropdown-item" href="sarten-mango-de-planchuela.html">Sartén mango de planchuela</a></li><li><a class="dropdown-item" href="pizzera-en-chapa-enlozada.html">Pizzera en chapa enlozada</a></li></ul></li>
-
-
-
-
-
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="./productos/categorias.js"></script>
-
-   
-      </ul>
+            </ul>
 
 
 
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-warning" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
 
-<!-- Jumbotron -->
-<div class="jumbotron jumbotron-fluid">
-  <div class="container text-center">
-    <h1 class="display-4" style="font-family: Bernard MT condensed">El Galpón de Mario</h1>
-    <p class="lead">Parrillas y herrajes a medida - Muebles de Jardín - Faroles - Buzones y ¡mucho más!</p>
-  </div>
-</div>
-
-<!-- Carousel -->
-<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./img/img1.gif" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Muebles de jardín</h5>
-        <h6>Juegos de jardín - Bebederos de aves - Arrollamangueras </h6>
-        <button class="btn btn-outline-light">Ver todos</button>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="./img/img2.gif" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Decoración</h5>
-        <h6>Faroles - Campanas</h6>
-        <button class="btn btn-outline-light">Ver todos</button>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="./img/img3.gif" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Accesorios para la parrilla</h5>
-        <h6>Atizadores - Provoleteras - Planchas</h6>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-<h3 class="section-title section-title-center"><b></b>
-  <span class="section-title-main">Productos Destacados</span><b></b>
-</h3>
-
-<!-- Contenido principal -->
-<div class="container my-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 1">
-        <div class="card-body">
-          <h5 class="card-title">Servicio 1</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
+      <!-- Jumbotron -->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+          <h1 class="display-4" style="font-family: Bernard MT condensed">El Galpón de Mario</h1>
+          <p class="lead">Parrillas y herrajes a medida - Muebles de Jardín - Faroles - Buzones y ¡mucho más!</p>
         </div>
       </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 2">
-        <div class="card-body">
-          <h5 class="card-title">Servicio 2</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
+
+      <!-- Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+        data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/img1.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Muebles de jardín</h5>
+              <h6>Juegos de jardín - Bebederos de aves - Arrollamangueras </h6>
+              <button class="btn btn-outline-light">Ver todos</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/img2.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Decoración</h5>
+              <h6>Faroles - Campanas</h6>
+              <button class="btn btn-outline-light">Ver todos</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/img3.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Accesorios para la parrilla</h5>
+              <h6>Atizadores - Provoleteras - Planchas</h6>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h3 class="section-title section-title-center"><b></b>
+        <span class="section-title-main">Productos Destacados</span><b></b>
+      </h3>
+
+      <!-- Contenido principal -->
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 1">
+              <div class="card-body">
+                <h5 class="card-title">Servicio 1</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio,
+                  gravida pellentesque urna varius vitae.</p>
+                <a href="#" class="btn btn-primary">Más información</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 2">
+              <div class="card-body">
+                <h5 class="card-title">Servicio 2</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio,
+                  gravida pellentesque urna varius vitae.</p>
+                <a href="#" class="btn btn-primary">Más información</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 3">
+              <div class="card-body">
+                <h5 class="card-title">Servicio 3</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio,
+                  gravida pellentesque urna varius vitae.</p>
+                <a href="#" class="btn btn-primary">Más información</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 3">
-        <div class="card-body">
-          <h5 class="card-title">Servicio 3</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
-        </div>
+
+      <!-- Maps -->
+      <div class="map-container">
+        <iframe
+          src="https://maps.google.com/maps?q=Colectora Sur Acceso Oeste 7834, B1714 Ituzaingó&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- Maps -->
-<div class="map-container">
-  <iframe src="https://maps.google.com/maps?q=Colectora Sur Acceso Oeste 7834, B1714 Ituzaingó&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-  </iframe>
-</div>
 
 
 
 
 
-<!-- Sección de contacto -->
-<a name="contacto">
-<div class="container mt-5" >
-  <h2  class="text-center">Contacto</h2>
-  <p class="text-center">Completa el formulario para enviarnos un mensaje</p>
-  <form>
-    <div class="form-group">
-      <label for="nombre">Nombre</label>
-      <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp">
-      <small id="nombreHelp" class="form-text text-muted">Ingrese su nombre completo</small>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">Ingrese un email válido</small>
-    </div>
-    <div class="form-group">
-      <label for="mensaje">Mensaje</label>
-      <textarea class="form-control" id="mensaje" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </form>
-</div>
+      <!-- Sección de contacto -->
+      <a name="contacto">
+        <div class="container mt-5">
+          <h2 class="text-center">Contacto</h2>
+          <p class="text-center">Completa el formulario para enviarnos un mensaje</p>
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp">
+              <small id="nombreHelp" class="form-text text-muted">Ingrese su nombre completo</small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">Ingrese un email válido</small>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
 
 
 
 
-<!-- Footer -->
-<footer class="bg-light py-3">
-  <div class="container">
-    <p class="text-center">&copy; Mi página web - Todos los derechos reservados</p>
-  </div>
-</footer>
+        <!-- Footer -->
+        <footer class="bg-light py-3">
+          <div class="container">
+            <p class="text-center">&copy; Mi página web - Todos los derechos reservados</p>
+          </div>
+        </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+          crossorigin="anonymous"></script>
 
-<!-- 
+        <!-- 
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 -->
-<script> const sass = require('node-sass')</script>
+        <script> const sass = require('node-sass')</script>
 
 
 </body>
+
 </html>
