@@ -1,6 +1,7 @@
 // Lee el archivo json
 //fetch('../productos/categorias.json')
 fetch('categorias.json')
+
   .then(response => response.json())
   .then(data => {
     // Busca el contenedor donde se insertarán los productos
