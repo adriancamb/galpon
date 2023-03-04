@@ -49,7 +49,7 @@ h1,h2,h3,h4,h5,h6 {
   opacity: .8
 }
 
-h5{
+.categoria{
   font-family: Georgia, serif;
   font-size: xx-large;
   letter-spacing: 0px;
@@ -60,8 +60,9 @@ h5{
   font-style: normal;
   font-variant: small-caps;
   text-transform: none;
+  text-shadow: 0 0 2px black, 0 0 10px black;
 }
-h6{
+.producto{
   font-family: Georgia, serif;
   font-size: x-large;
   letter-spacing: 0px;
@@ -72,6 +73,7 @@ h6{
   font-style: normal;
   font-variant: small-caps;
   text-transform: none;
+  text-shadow: 0 0 2px black, 0 0 10px black;
 }
 .carousel-caption {
     top: 50%;
@@ -212,6 +214,7 @@ h6{
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
 }
-
-
-
+.btn-outline-light{
+  color: white;
+  text-shadow: 0 0 2px white;
+}
