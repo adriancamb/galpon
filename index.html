@@ -174,14 +174,18 @@ git pull https://github.com/adriancamb/galpon.git
   <span class="section-title-main">Productos Destacados</span><b></b>
 </h3>
 
+
+
 <!-- Contenido principal -->
+
+<!--
 <div class="container my-5">
   <div class="row">
     <div class="col-sm-4">
       <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 1">
+        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 1">
         <div class="card-body">
-          <h5 class="card-title">Servicio 1</h5>
+          <h5 class="card-title">producto 1</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
           <a href="#" class="btn btn-primary">Más información</a>
         </div>
@@ -189,9 +193,9 @@ git pull https://github.com/adriancamb/galpon.git
     </div>
     <div class="col-sm-4">
       <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 2">
+        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 2">
         <div class="card-body">
-          <h5 class="card-title">Servicio 2</h5>
+          <h5 class="card-title">producto 2</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
           <a href="#" class="btn btn-primary">Más información</a>
         </div>
@@ -199,9 +203,9 @@ git pull https://github.com/adriancamb/galpon.git
     </div>
     <div class="col-sm-4">
       <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de servicio 3">
+        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 3">
         <div class="card-body">
-          <h5 class="card-title">Servicio 3</h5>
+          <h5 class="card-title">producto 3</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
           <a href="#" class="btn btn-primary">Más información</a>
         </div>
@@ -209,6 +213,46 @@ git pull https://github.com/adriancamb/galpon.git
     </div>
   </div>
 </div>
+-->
+
+<!--Primero, se puede agregar un contenedor vacío en el HTML para que se agreguen las tarjetas de productos generadas dinámicamente:-->
+<div id="productos-container" class="container my-5"></div>
+<!--Luego, se puede usar JavaScript para leer el archivo JSON y crear las tarjetas de productos solo para los productos destacados:-->
+
+<script>
+// Leer el archivo JSON de productos
+fetch("./productos/categorias.json")
+  .then(response => response.json())
+  .then(data => {
+    // Filtrar solo los productos destacados
+    const productosDestacados = data.categorias.reduce((acc, categoria) => {
+        const productos = categoria.productos.filter(producto => Boolean(producto.destacado));
+        return acc.concat(productos);
+    }, []);
+
+    // Crear el HTML para cada producto destacado
+    const productosHTML = productosDestacados.map(producto => `
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="${producto.imagen}" class="card-img-top" alt="Imagen de ${producto.nombre}">
+          <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-text">${producto.descripcion}</p>
+            <a href="#" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Agregar el HTML de los productos destacados al contenedor
+    document.getElementById('productos-container').innerHTML = `
+      <div class="row">${productosHTML}</div>
+    `;
+    
+  });
+</script>
+
+
 
 <!-- Maps -->
 <div class="map-container">
