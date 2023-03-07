@@ -238,7 +238,8 @@ fetch("./productos/categorias.json")
           <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
             <p class="card-text">${producto.descripcion}</p>
-            <a href="#" class="btn btn-primary">Más información</a>
+            <a href="${producto.url}" class="btn btn-warning" style="float: right";>Más información</a>
+        
           </div>
         </div>
       </div>

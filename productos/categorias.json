@@ -9,7 +9,7 @@
                 {
                     "nombre": "Arrollamangueras",
                     "url": "arrollamangueras.html",
-                    "imagen": "./arrollamanguera.jpg",
+                    "imagen": "./productos/arrollamanguera.jpg",
                     "descripcion": "Arrollamanguera de distintos tipos",
                     "destacado": true
                 },
