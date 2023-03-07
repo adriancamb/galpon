@@ -3,61 +3,61 @@
         {
             "nombre": "Jardín",
             "url": "jardin.html",
-            "imagen": "./imagen.jpg",
+            "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
                 {
                     "nombre": "Arrollamangueras",
                     "url": "arrollamangueras.html",
-                    "imagen": "./img/arrollamanguera.jpg",
+                    "imagen": "img/arrollamanguera.jpg",
                     "descripcion": "Arrollamanguera de distintos tipos",
                     "destacado": true
                 },
                 {
                     "nombre": "Bebederos",
                     "url": "bebederos.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": true
                 },
                 {
                     "nombre": "Llamadores",
                     "url": "llamadores.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": true
                 },
                 {
                     "nombre": "Veletas",
                     "url": "veletas.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Muebles de Jardín",
                     "url": "muebles-de-jardin.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "subproductos": [
                         {
                             "nombre": "Fundición de aluminio",
                             "url": "fundicion-de-aluminio.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Función de hierro",
                             "url": "funcion-de-hierro.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Hierro forjado",
                             "url": "hierro-forjado.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         }
@@ -68,41 +68,41 @@
         {
             "nombre": "Parrillas",
             "url": "parrillas.html",
-            "imagen": "./imagen.jpg",
+            "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
                 {
                     "nombre": "Accesorios para parrillas",
                     "url": "accesorios-para-parrillas.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Asadores",
                     "url": "asadores.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Herrajes",
                     "url": "herrajes.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Parrillas a carbón o leña",
                     "url": "parrillas-a-carbon-o-lena.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Parrillas a gas",
                     "url": "parrillas-a-gas.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 }
@@ -111,26 +111,26 @@
         {
             "nombre": "Calefacción",
             "url": "calefaccion.html",
-            "imagen": "./imagen.jpg",
+            "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
                 {
                     "nombre": "Hogares",
                     "url": "hogares.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "productos": [
                         {
                             "nombre": "Accesorios para hogares",
                             "url": "accesorios-para-hogares.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Salamandras",
                             "url": "salamandras.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         }
@@ -141,20 +141,20 @@
         {
             "nombre": "Iluminación",
             "url": "iluminacion.html",
-            "imagen": "./imagen.jpg",
+            "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
                 {
                     "nombre": "Faroles",
                     "url": "faroles.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Faroles con columnas",
                     "url": "faroles-con-columnas.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 }
@@ -163,45 +163,45 @@
         {
             "nombre": "Gastronomía",
             "url": "gastronomia.html",
-            "imagen": "./imagen.jpg",
+            "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
                 {
                     "nombre": "Calderos en hierro",
                     "url": "calderos-en-hierro.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Cacerolas de fundición",
                     "url": "cacerolas-de-fundicion.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "subproductos": [
                         {
                             "nombre": "Enlozadas",
                             "url": "enlozadas.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Sin enlozar",
                             "url": "enlozadas.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "subproductos": [
                                 {
                                     "nombre": "Ovaladas",
                                     "url": "ovaladas.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "subproductos": [
                                         {
                                             "nombre": "Doble función",
                                             "url": "doble-funcion.html",
-                                            "imagen": "./imagen.jpg",
+                                            "imagen": "img/imagen.jpg",
                                             "descripcion": "Esta es la descripcion",
                                             "destacado": false
                                         }
@@ -214,33 +214,33 @@
                 {
                     "nombre": "Planchas para bifes",
                     "url": "planchas-para-bifes.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "subproductos": [
                         {
                             "nombre": "Lisas",
                             "url": "lisas.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Rayadas",
                             "url": "rayadas.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "subproductos": [
                                 {
                                     "nombre": "Enlozadas",
                                     "url": "enlozadas.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
                                 },
                                 {
                                     "nombre": "Sin enlozar",
                                     "url": "sin-enlozar.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
                                 }
@@ -251,26 +251,26 @@
                 {
                     "nombre": "Provoleteras de fundición",
                     "url": "provoleteras.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "subproductos": [
                         {
                             "nombre": "Mango de madera",
                             "url": "mango-de-madera.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "subproductos": [
                                 {
                                     "nombre": "Enlozadas",
                                     "url": "enlozadas.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
                                 },
                                 {
                                     "nombre": "Sin enlozar",
                                     "url": "sin-enlozar.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
                                 }
@@ -279,20 +279,20 @@
                         {
                             "nombre": "Mango de fundición",
                             "url": "mango-de-fundicion.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "subproductos": [
                                 {
                                     "nombre": "Enlozadas",
                                     "url": "enlozadas.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
                                 },
                                 {
                                     "nombre": "Sin enlozar",
                                     "url": "sin-enlozar.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
                                 }
@@ -301,20 +301,20 @@
                         {
                             "nombre": "De 15 porciones",
                             "url": "15-porciones.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "subproductos": [
                                 {
                                     "nombre": "Enlozadas",
                                     "url": "enlozadas.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
                                 },
                                 {
                                     "nombre": "Sin enlozar",
                                     "url": "sin-enlozar.html",
-                                    "imagen": "./imagen.jpg",
+                                    "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
                                 }
@@ -325,27 +325,27 @@
                 {
                     "nombre": "Asaderas en chapa plegada",
                     "url": "asaderas-en-chapa-plegada.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Paelleras con 2 asas",
                     "url": "paelleras-con-2-asas.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "subproductos": [
                         {
                             "nombre": "Enlozadas",
                             "url": "enlozadas.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Sin enlozar",
                             "url": "sin-enlozar.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         }
@@ -354,20 +354,20 @@
                 {
                     "nombre": "Woks",
                     "url": "woks.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "subproductos": [
                         {
                             "nombre": "Enlozadas",
                             "url": "enlozadas.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Sin enlozar",
                             "url": "sin-enlozar.html",
-                            "imagen": "./imagen.jpg",
+                            "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         }
@@ -376,14 +376,14 @@
                 {
                     "nombre": "Sartén mango de planchuela",
                     "url": "sarten-mango-de-planchuela.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Pizzera en chapa enlozada",
                     "url": "pizzera-en-chapa-enlozada.html",
-                    "imagen": "./imagen.jpg",
+                    "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 }
