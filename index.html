@@ -236,10 +236,11 @@ fetch("./productos/categorias.json")
         <div class="card">
           <img src="${producto.imagen}" class="card-img-top" alt="Imagen de ${producto.nombre}">
           <div class="card-body">
-            <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-text">${producto.descripcion}</p>
-            <a href="${producto.url}" class="btn btn-warning" style="float: right";>Más información</a>
-        
+            <div class="cardTexto">
+              <h5 class="card-title">${producto.nombre}</h5>
+              <p class="card-text">${producto.descripcion}</p>
+              <a href="${producto.url}" class="btn btn-warning" style="float: right";>Más información</a>
+            </div>
           </div>
         </div>
       </div>
