@@ -239,19 +239,37 @@ text-align: justify;
 height: 100%;
 color: #fff;
 transition: all .5s;
-
 }
 
 .cardTexto h5{
   text-align: center;
   font-size: 25px;
   padding: 40px 10px;
-
+}
+.cardTexto p{
+  text-align: center;
+  font-size: 17px;
+  padding: 40px 10px;
 }
  .card:hover img{
   transform: scale(1.09);
+  filter: blur(8px);
  }
 
  .card:hover .cardTexto{
   top: 0;
  }
+ .card:hover .masInfo{
+  bottom: -70%;
+ }
+
+ .masInfo{
+  background-color: transparent;
+  position: absolute;
+  bottom: -100%;
+  padding: 0 0 20px 130px;
+  text-align: justify;
+  height: 100%;
+  color: #fff;
+  transition: all .5s;
+}
