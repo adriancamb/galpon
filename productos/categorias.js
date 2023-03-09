@@ -1,6 +1,6 @@
 // Lee el archivo json
 //fetch('../productos/categorias.json')
-fetch('./productos/categorias.json')
+fetch('../productos/categorias.json')
 
   .then(response => response.json())
   .then(data => {

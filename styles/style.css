@@ -232,14 +232,33 @@ h1,h2,h3,h4,h5,h6 {
 .cardTexto{
   width: 100%;
   background-color: rgba(0,0,0,.7);
-position: absolute;
-top: -100%;
-left: 0;
-text-align: justify;
-height: 100%;
-color: #fff;
-transition: all .5s;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  text-align: justify;
+  height: 100%;
+  color: #fff;
+  transition: all .5s;
 }
+
+.card:hover .cardTexto{
+  top: 0;
+ }
+
+ .masInfo{
+  background-color: transparent;
+  position: absolute;
+  bottom: -100%;
+  padding: 0 0 20px 120px;
+  text-align: justify;
+  height: 100%;
+  color: #fff;
+  transition: all .5s;
+}
+
+.card:hover .masInfo{
+  bottom: -70%;
+ }
 
 .cardTexto h5{
   text-align: center;
@@ -256,20 +275,3 @@ transition: all .5s;
   filter: blur(8px);
  }
 
- .card:hover .cardTexto{
-  top: 0;
- }
- .card:hover .masInfo{
-  bottom: -70%;
- }
-
- .masInfo{
-  background-color: transparent;
-  position: absolute;
-  bottom: -100%;
-  padding: 0 0 20px 130px;
-  text-align: justify;
-  height: 100%;
-  color: #fff;
-  transition: all .5s;
-}

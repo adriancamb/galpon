@@ -2,34 +2,34 @@
     "categorias": [
         {
             "nombre": "Jardín",
-            "url": "jardin.html",
+            "url": "productos/jardin.html",
             "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
                 {
                     "nombre": "Arrollamangueras",
-                    "url": "arrollamangueras.html",
+                    "url": "productos/arrollamangueras.html",
                     "imagen": "img/arrollamanguera.jpg",
                     "descripcion": "Arrollamanguera de distintos tipos",
                     "destacado": true
                 },
                 {
                     "nombre": "Bebederos",
-                    "url": "bebederos.html",
+                    "url": "productos/bebederos.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": true
                 },
                 {
                     "nombre": "Llamadores",
-                    "url": "llamadores.html",
+                    "url": "productos/llamadores.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": true
                 },
                 {
                     "nombre": "Veletas",
-                    "url": "veletas.html",
+                    "url": "productos/veletas.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
@@ -67,7 +67,7 @@
         },
         {
             "nombre": "Parrillas",
-            "url": "parrillas.html",
+            "url": "productos/parrillas.html",
             "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
@@ -80,14 +80,14 @@
                 },
                 {
                     "nombre": "Asadores",
-                    "url": "asadores.html",
+                    "url": "productos/asadores.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
                 },
                 {
                     "nombre": "Herrajes",
-                    "url": "herrajes.html",
+                    "url": "productos/herrajes.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
@@ -110,13 +110,13 @@
         },
         {
             "nombre": "Calefacción",
-            "url": "calefaccion.html",
+            "url": "productos/calefaccion.html",
             "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
                 {
                     "nombre": "Hogares",
-                    "url": "hogares.html",
+                    "url": "productos/hogares.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "productos": [
@@ -129,7 +129,7 @@
                         },
                         {
                             "nombre": "Salamandras",
-                            "url": "salamandras.html",
+                            "url": "productos/salamandras.html",
                             "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
@@ -140,13 +140,13 @@
         },
         {
             "nombre": "Iluminación",
-            "url": "iluminacion.html",
+            "url": "productos/iluminacion.html",
             "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
                 {
                     "nombre": "Faroles",
-                    "url": "faroles.html",
+                    "url": "productos/faroles.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false
@@ -162,7 +162,7 @@
         },
         {
             "nombre": "Gastronomía",
-            "url": "gastronomia.html",
+            "url": "productos/gastronomia.html",
             "imagen": "img/imagen.jpg",
             "descripcion": "Esta es la descripcion",
             "productos": [
@@ -181,20 +181,20 @@
                     "subproductos": [
                         {
                             "nombre": "Enlozadas",
-                            "url": "enlozadas.html",
+                            "url": "productos/enlozadas.html",
                             "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Sin enlozar",
-                            "url": "enlozadas.html",
+                            "url": "productos/enlozadas.html",
                             "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "subproductos": [
                                 {
                                     "nombre": "Ovaladas",
-                                    "url": "ovaladas.html",
+                                    "url": "productos/ovaladas.html",
                                     "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "subproductos": [
@@ -219,20 +219,20 @@
                     "subproductos": [
                         {
                             "nombre": "Lisas",
-                            "url": "lisas.html",
+                            "url": "productos/lisas.html",
                             "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
                         },
                         {
                             "nombre": "Rayadas",
-                            "url": "rayadas.html",
+                            "url": "productos/rayadas.html",
                             "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "subproductos": [
                                 {
                                     "nombre": "Enlozadas",
-                                    "url": "enlozadas.html",
+                                    "url": "productos/enlozadas.html",
                                     "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
@@ -250,7 +250,7 @@
                 },
                 {
                     "nombre": "Provoleteras de fundición",
-                    "url": "provoleteras.html",
+                    "url": "productos/provoleteras.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "subproductos": [
@@ -262,7 +262,7 @@
                             "subproductos": [
                                 {
                                     "nombre": "Enlozadas",
-                                    "url": "enlozadas.html",
+                                    "url": "productos/enlozadas.html",
                                     "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
@@ -284,7 +284,7 @@
                             "subproductos": [
                                 {
                                     "nombre": "Enlozadas",
-                                    "url": "enlozadas.html",
+                                    "url": "productos/enlozadas.html",
                                     "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
@@ -306,7 +306,7 @@
                             "subproductos": [
                                 {
                                     "nombre": "Enlozadas",
-                                    "url": "enlozadas.html",
+                                    "url": "productos/enlozadas.html",
                                     "imagen": "img/imagen.jpg",
                                     "descripcion": "Esta es la descripcion",
                                     "destacado": false
@@ -337,7 +337,7 @@
                     "subproductos": [
                         {
                             "nombre": "Enlozadas",
-                            "url": "enlozadas.html",
+                            "url": "productos/enlozadas.html",
                             "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false
@@ -353,13 +353,13 @@
                 },
                 {
                     "nombre": "Woks",
-                    "url": "woks.html",
+                    "url": "productos/woks.html",
                     "imagen": "img/imagen.jpg",
                     "descripcion": "Esta es la descripcion",
                     "subproductos": [
                         {
                             "nombre": "Enlozadas",
-                            "url": "enlozadas.html",
+                            "url": "productos/enlozadas.html",
                             "imagen": "img/imagen.jpg",
                             "descripcion": "Esta es la descripcion",
                             "destacado": false

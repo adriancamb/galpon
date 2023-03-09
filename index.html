@@ -27,6 +27,23 @@ git pull https://github.com/adriancamb/galpon.git
 -->
 
 
+<!--
+
+Abre el archivo JSON que contiene los nombres de archivo HTML en la carpeta raíz de tu proyecto.
+Usa el atajo de teclado "Ctrl + Shift + F" o "Cmd + Shift + F" para abrir la función "Buscar en archivos".
+
+En el campo "Buscar", ingresa la siguiente expresión regular: \"(\w+\.html)\"
+  
+  Esto buscará todos los nombres de archivo HTML que están dentro de comillas dobles en tu archivo JSON.
+
+En el campo "Reemplazar con", ingresa "productos/$1".
+  
+  Esto agregará la cadena "productos/" al principio del nombre de archivo HTML encontrado.
+
+  Asegúrate de que la opción "Usar expresiones regulares" esté habilitada en la función "Buscar en archivos".
+  Haz clic en "Reemplazar en archivos" para realizar el cambio en todo el archivo.
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,11 +55,7 @@ git pull https://github.com/adriancamb/galpon.git
   <link rel="stylesheet" href="./styles.css"/>
  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-
   <link href="./styles/style.css" rel="stylesheet">
-
- 
   <link href="./styles/_reboot.scss" rel="stylesheet">
   
 </head>
@@ -62,9 +75,7 @@ git pull https://github.com/adriancamb/galpon.git
       <a class="navbar-brand col-lg-3 me-0" href="#" style="padding:0px"><img src="./img/logo.gif" height="60" alt="";> </a>
       <div id="nav-container"></div>
 
-
       <ul id= "json" class="navbar-nav col-lg-6 justify-content-lg-center">
-
         
       <!--  
         <li class="nav-item dropdown">
@@ -93,14 +104,6 @@ git pull https://github.com/adriancamb/galpon.git
         -->
 
         <!-- Incluye jQuery para hacer la solicitud AJAX para leer las categorías desde el json -->
-
-
-
-
-
-
-
-
 
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -242,7 +245,8 @@ fetch("./productos/categorias.json")
             </div>
             <div class= "masInfo">
               <a href="${producto.url}" class="btn btn-warning" style="float: center";>Más información</a>
-              </div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -298,7 +302,7 @@ fetch("./productos/categorias.json")
 <!-- Footer -->
 <footer class="bg-light py-3">
   <div class="container">
-    <p class="text-center">&copy; Mi página web - Todos los derechos reservados</p>
+    <p class="text-center">&copy; Diseñado por AAC - Todos los derechos reservados</p>
   </div>
 </footer>
 

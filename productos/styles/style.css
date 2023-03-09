@@ -1,0 +1,55 @@
+/* Estilo de la imagen */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Estilo de la imagen con zoom */
+  .zoomable {
+    transition: transform 0.5s ease; /* Agrega una transición suave */
+
+  }
+  
+  .zoomable:hover {
+    transform: scale(1.5); /* Hace un zoom de 2 veces al pasar el mouse por encima */
+
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  .zoom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-size: 300% 300%;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .image-container:hover .zoom {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .image-container:hover .zoom {
+    background-image: url('../../img/arrollamanguera.jpg');
+    background-size: 300% 300%;
+  }
+  
+  .image-container:hover .zoom:hover {
+    background-size: 500% 500%;
+  }
+  .zoom-container {
+    position: relative;
+    overflow: hidden;
+}
