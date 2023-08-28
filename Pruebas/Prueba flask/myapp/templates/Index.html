@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-0nQEr8tDXk63J39yNfdo+oW/cJ8tFicY36HjpuF1AVVEk+nqg3q3J+QPhytiuJzW1RmJvMzZ2b6UJIR6jKg6DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    {% for category in categories %}
+                        {% if category.parent_id == None %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{ category.id }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ category.name }}
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink{{ category.id }}">
+                                    {% for subcategory in categories %}
+                                        {% if subcategory.parent_id == category.id %}
+                                            <li class="dropdown-submenu">
+                                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownSubMenuLink{{ subcategory.id }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    {{ subcategory.name }}
+                                                </a>
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownSubMenuLink{{ subcategory.id }}">
+                                                    {% for subsubcategory in categories %}
+                                                        {% if subsubcategory.parent_id == subcategory.id %}
+                                                            <li><a class="dropdown-item" href="{{ subsubcategory.url }}">{{ subsubcategory.name }}</a></li>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-+cT6/AL8sZsBvmre+7AyscB6pyi19XN//T6TcdB6E1TVZsGpkhJzYB+noztmmvtz6xvM6Jh2D+Ou6DKsfEJrLw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body

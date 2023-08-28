@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- ícono de carrito de compra  -->
+    <link href="../styles/_reboot.scss" rel="stylesheet" />
+
+    <style>
+        b,
+        strong {
+            font-weight: 1px;
+        }
+
+        * {
+            font-family: "Roboto Condensed";
+        }
+
+        .navbar .nav-link:hover {
+            color: orangered;
+            /* Este es el color que se aplicará al hacer hover */
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #555;
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: .5em;
+            text-rendering: optimizeSpeed
+        }
+
+        .h1,
+        h1 {
+            font-size: 1.7em;
+            line-height: 1.3
+        }
+
+        .h2,
+        h2 {
+            font-size: 1.6em;
+            line-height: 1.3
+        }
+
+        .h3,
+        h3 {
+            font-size: 1.25em
+        }
+
+        .h4,
+        h4 {
+            font-size: 1.125em
+        }
+
+        .h5,
+        h5 {
+            font-size: 1em
+        }
+
+        .h6,
+        h6 {
+            font-size: .85em;
+            opacity: .8
+        }
+
+        .categoria {
+            font-family: Georgia, serif;
+            font-size: xx-large;
+            letter-spacing: 0px;
+            word-spacing: 0px;
+            color: white;
+            font-weight: 700;
+            text-decoration: none solid rgb(68, 68, 68);
+            font-style: normal;
+            font-variant: small-caps;
+            text-transform: none;
+            text-shadow: 0 0 2px black, 0 0 10px black;
+        }
+
+        .producto {
+            font-family: Georgia, serif;
+            font-size: x-large;
+            letter-spacing: 0px;
+            word-spacing: 0px;
+            color: white;
+            font-weight: 700;
+            text-decoration: none solid rgb(68, 68, 68);
+            font-style: normal;
+            font-variant: small-caps;
+            text-transform: none;
+            text-shadow: 0 0 2px black, 0 0 10px black;
+        }
+
+        .carousel-caption {
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: initial;
+            /*   color: red;*/
+        }
+
+        .btn {
+            border-style: solid;
+            border-width: 2px;
+            color: black
+        }
+
+        .map-container iframe {
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+        }
+
+        .section-title b {
+            display: block;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            height: 2px;
+            opacity: .1;
+            background-color: currentColor
+        }
+
+        .section-title {
+            position: relative;
+            -js-display: flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .section-title i {
+            opacity: .6;
+            margin-right: 0.5em
+        }
+
+        .section-title i.icon-angle-right {
+            margin-right: 0;
+            margin-left: 10px
+        }
+
+        .section-title span {
+            text-transform: uppercase
+        }
+
+        .section-title small {
+            text-transform: none;
+            font-weight: normal;
+            padding-left: 15px;
+            font-size: 1em;
+            opacity: .7
+        }
+
+        .section-title-center span {
+            margin: 0 15px
+        }
+
+        .section-title-center span,
+        .section-title-bold-center span {
+            text-align: center
+        }
+
+        .section-title-center small,
+        .section-title-bold-center small {
+            padding: 0 15px;
+            display: block
+        }
+
+        .section-title-bold-center span,
+        .section-title-bold span {
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            padding: .3em .8em
+        }
+
+        .section-title-bold b:first-of-type {
+            display: none
+        }
+
+        /* clase para los subproductos  */
+
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            -webkit-border-radius: 0 6px 6px 6px;
+            -moz-border-radius: 0 6px 6px 6px;
+            border-radius: 0 6px 6px 6px;
+        }
+
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu>a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #000000;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+
+        .dropdown-submenu:hover>a:after {
+            border-left-color: orangered;
+            color: orangered;
+        }
+
+        .dropdown-submenu.pull-left {
+            float: none;
+        }
+
+        .dropdown-submenu.pull-left>.dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }
+
+        .btn-outline-light {
+            color: white;
+            text-shadow: 0 0 2px white;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            border-color: red;
+        }
+
+        .card img {
+            transition: all .5s;
+        }
+
+        .cardTexto {
+            width: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            position: absolute;
+            top: -100%;
+            left: 0;
+            text-align: justify;
+            height: 100%;
+            color: #fff;
+            transition: all .5s;
+        }
+
+        .card:hover .cardTexto {
+            top: 0;
+        }
+
+        .masInfo {
+            background-color: transparent;
+            position: absolute;
+            bottom: -100%;
+            padding: 0 0 20px 120px;
+            text-align: justify;
+            height: 100%;
+            color: #fff;
+            transition: all .5s;
+        }
+
+        .card:hover .masInfo {
+            bottom: -40%;
+        }
+
+        .cardTexto h5 {
+            text-align: center;
+            font-size: 25px;
+            padding: 80px 10px;
+        }
+
+        .cardTexto p {
+            text-align: center;
+            font-size: 17px;
+            padding: 90px 10px;
+        }
+
+        .card:hover img {
+            transform: scale(1.09);
+            filter: blur(8px);
+        }
+
+
+        .image-container {
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            cursor: zoom-in;
+        }
+
+        .zoom-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform 0.2s ease-out;
+        }
+
+        .zoom-image.zoomed {
+            transform: scale(1.5);
+            z-index: 1;
+            cursor: zoom-out;
+        }
+
+        #sub-accordion {
+            color: rgb(42, 120, 165);
+        }
+
+        .accordion-body {
+            padding: 0;
+        }
+
+        #sub-accordion .accordion-button:not(.collapsed) {
+            background-color: rgb(42, 120, 165);
+            /* Cambia el color cuando el acordeón está expandido */
+            color: white;
+            /* Cambia el color del texto cuando el acordeón está expandido */
+        }
+
+        button.accordion-button {
+            padding: 10px;
+        }
+
+        a:hover {
+            color: orangered;
+            /* Este es el color que se aplicará al hacer hover */
+        }
+
+        .vista-miniatura img {
+            width: 200px;
+            /* Ancho deseado para la imagen en tamaño pequeño */
+            height: auto;
+
+        }
+
+        .vista-miniatura {
+            padding: 10px;
+            width: 250px;
+            /* Ancho deseado para la imagen en tamaño pequeño */
+            height: auto;
+            border: 1px solid black;
+            /* Borde sólido de 1 píxel de color gris */
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contenedor-productos {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* 5 columnas de ancho igual */
+            grid-gap: 10px;
+            /* Espacio entre las vistas en miniatura */
+        }
+
+        .menu .dropdown-menu {
+            display: none;
+        }
+
+        a.nav-link:hover {
+            display: block;
+        }
+
+        .menu .nav-link:hover+.dropdown-menu,
+        .menu .dropdown-menu:hover {
+            display: block;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Obtiene el nombre del archivo HTML actual
+        var currentFile = window.location.pathname.split('/').pop();
+        // Remueve la extensión ".html" del nombre del archivo
+        var categoryName = currentFile.slice(0, -5);
+
+        // Asigna el valor a la variable nombreCategoria
+        var nombreCategoria = categoryName;
+    </script>
+
+
+    <title id="pagina-titulo"></title>
+
+</head>
+
+<body>
+
+    <main>
+        <div class="categorias"> <!--   <div class="container">-->
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example">
+                <div class="container-fluid">
+
+                    <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+
+
+
+                        <ul id="json" class="navbar-nav col-lg-6 justify-content-lg-center">
+                            <li class="nav-item dropdown hover-dropdown"><a class="nav-link dropdown-toggle" href="/productos/Jardin.html" data-bs-toggle="dropdown" aria-expanded="false">Jardín</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="/productos/Arrollamangueras.html">Arrollamangueras</a></li>
+                                    <li><a class="dropdown-item" href="/productos/Bebederos.html">Bebederos</a></li>
+                                    <li><a class="dropdown-item" href="/productos/Llamadores.html">Llamadores</a></li>
+                                    <li><a class="dropdown-item" href="/productos/Veletas.html">Veletas</a></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item"
+                                            href="/productos/Muebles-de-Jardin.html">Muebles de Jardín</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item"
+                                                    href="/productos/Fundicion-de-aluminio.html">Fundición de
+                                                    aluminio</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="/productos/Funcion-de-hierro.html">Función de hierro</a></li>
+                                            <li><a class="dropdown-item" href="/productos/Hierro-forjado.html">Hierro
+                                                    forjado</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                    href="/productos/Parrillas.html" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Parrillas</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="/productos/Accesorios-para-parrillas.html">Accesorios para
+                                            parrillas</a></li>
+                                    <li><a class="dropdown-item" href="/productos/Asadores.html">Asadores</a></li>
+                                    <li><a class="dropdown-item" href="/productos/Herrajes.html">Herrajes</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/productos/Parrillas-a-carbon-o-leña.html">Parrillas a carbón o
+                                            leña</a></li>
+                                    <li><a class="dropdown-item" href="/productos/Parrillas-a-gas.html">Parrillas a
+                                            gas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                    href="/productos/Calefaccion.html" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Calefacción</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/productos/Hogares.html">Hogares</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                    href="/productos/Iluminacion.html" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Iluminación</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/productos/Faroles.html">Faroles</a></li>
+                                    <li><a class="dropdown-item" href="/productos/Faroles-con-columnas.html">Faroles con
+                                            columnas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                    href="/productos/Gastronomia.html" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Gastronomía</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/productos/Calderos-en-hierro.html">Calderos en
+                                            hierro</a></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item"
+                                            href="/productos/Cacerolas-de-fundicion.html">Cacerolas de fundicion</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item"
+                                                    href="/productos/Cacerolas-de-fundicion-enlonzadas.html">Cacerolas
+                                                    de fundicion enlonzadas</a></li>
+                                            <li class="dropdown-submenu"><a class="dropdown-item"
+                                                    href="/productos/Cacerolas-de-fundicion-sin-enlonzar.html">Cacerolas
+                                                    de fundicion sin enlonzar</a>
+                                                <ul class="dropdown-menu dropdown-submenu">
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Cacerolas-de-fundicion-Ovaladas.html">Cacerolas
+                                                            de fundicion Ovaladas</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Cacerolas-de-fundicion-doble-funcion.html">Cacerolas
+                                                            de fundicion doble función</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item"
+                                            href="/productos/Planchas-para-bifes.html">Planchas para bifes</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item"
+                                                    href="/productos/Planchas-para-bifes-lisas.html">Planchas para bifes
+                                                    lisas</a></li>
+                                            <li class="dropdown-submenu"><a class="dropdown-item"
+                                                    href="/productos/Planchas-para-bifes-rayadas.html">Planchas para
+                                                    bifes rayadas</a>
+                                                <ul class="dropdown-menu dropdown-submenu">
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Planchas-para-bifes-rayadas-enlonzadas.html">Planchas
+                                                            para bifes rayadas enlonzadas</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Planchas-para-bifes-rayadas-sin-enlonzar.html">Planchas
+                                                            para bifes rayadas sin enlonzar</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item"
+                                            href="/productos/Provoleteras-de-fundicion.html">Provoleteras de
+                                            fundicion</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li class="dropdown-submenu"><a class="dropdown-item"
+                                                    href="/productos/Provoleteras-de-fundicion-mangos-de-madera.html">Provoleteras
+                                                    de fundición mangos de madera</a>
+                                                <ul class="dropdown-menu dropdown-submenu">
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Provoleteras-de-fundicion-mangos-de-madera-enlonzadas.html">Provoleteras
+                                                            de fundición mangos de madera enlonzadas</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Provoleteras-de-fundicion-mangos-de-madera-sin-enlonzar.html">Provoleteras
+                                                            de fundición mangos de madera sin enlonzar</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu"><a class="dropdown-item"
+                                                    href="/productos/Provoleteras-de-fundicion-mangos-de-fundicion.html">Provoleteras
+                                                    de fundición mangos de fundición</a>
+                                                <ul class="dropdown-menu dropdown-submenu">
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Provoleteras-de-fundicion-mangos-de-enlonzadas.html">Provoleteras
+                                                            de fundición mangos de enlonzadas</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Provoleteras-de-fundicion-mangos-de-sin-enlonzar.html">Provoleteras
+                                                            de fundición mangos de sin enlonzar</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu"><a class="dropdown-item"
+                                                    href="/productos/Provoleteras-de-15-porciones.html">Provoleteras de
+                                                    15 porciones</a>
+                                                <ul class="dropdown-menu dropdown-submenu">
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Provoleteras-de-15-porciones-enlonzadas.html">Provoleteras
+                                                            de 15 porciones enlonzadas</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="/productos/Provoleteras-de-15-porciones-sin-enlonzar.html">Provoleteras
+                                                            de 15 porciones sin enlonzar</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="/productos/Asaderas-en-chapa-plegada.html">Asaderas en chapa
+                                            plegada</a></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item"
+                                            href="/productos/Paelleras-con-2-asas.html">Paelleras con 2 asas</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item"
+                                                    href="/productos/Paelleras-con-2-asas-enlonzadas.html">Paelleras con
+                                                    2 asas enlonzadas</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="/productos/Paelleras-con-2-asas-sin-enlonzar.html">Paelleras
+                                                    con 2 asas sin enlonzar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item"
+                                            href="/productos/Woks.html">Woks</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item" href="/productos/Woks-enlonzados.html">Woks
+                                                    enlonzados</a></li>
+                                            <li><a class="dropdown-item" href="/productos/Woks-sin-enlonzar.html">Woks
+                                                    sin enlonzar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="/productos/Sartén-mango-de-planchuela.html">Sartén mango de
+                                            planchuela</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/productos/Pizzera-en-chapa-enlozada.html">Pizzera en chapa
+                                            enlozada</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </nav>
+
+
+    </main>
+
+    <script>
+        // Obtener todos los elementos con la clase "hover-dropdown"
+        var dropdownItems = document.getElementsByClassName('hover-dropdown');
+    
+        // Iterar sobre los elementos y agregar eventos
+        for (var i = 0; i < dropdownItems.length; i++) {
+            // Agregar evento "mouseenter" a cada elemento
+            dropdownItems[i].addEventListener('mouseenter', function () {
+                // Buscar el elemento "dropdown-menu" dentro del elemento actual
+                var dropdownMenu = this.querySelector('.dropdown-menu');
+                // Agregar la clase "show" al menú desplegable
+                dropdownMenu.classList.add('show');
+            });
+    
+            // Agregar evento "mouseleave" a cada elemento
+            dropdownItems[i].addEventListener('mouseleave', function () {
+                // Buscar el elemento "dropdown-menu" dentro del elemento actual
+                var dropdownMenu = this.querySelector('.dropdown-menu');
+                // Remover la clase "show" del menú desplegable
+                dropdownMenu.classList.remove('show');
+            });
+        }
+    </script>
+    <script>
+        // Obtener todos los elementos con la clase "hover-dropdown"
+        var dropdownItems = document.getElementsByClassName('hover-dropdown');
+    
+        // Iterar sobre los elementos y agregar eventos
+        for (var i = 0; i < dropdownItems.length; i++) {
+            // Agregar evento "mouseenter" a cada elemento
+            dropdownItems[i].addEventListener('mouseenter', function () {
+                var dropdownMenu = this.querySelector('.dropdown-menu');
+                dropdownMenu.classList.add('show');
+            });
+    
+            // Agregar evento "mouseleave" a cada elemento
+            dropdownItems[i].addEventListener('mouseleave', function () {
+                var dropdownMenu = this.querySelector('.dropdown-menu');
+                dropdownMenu.classList.remove('show');
+            });
+    
+            // Agregar evento "click" al enlace dentro de cada elemento
+            var dropdownLink = dropdownItems[i].querySelector('.nav-link');
+            dropdownLink.addEventListener('click', function (event) {
+                // Evitar que el enlace siga su comportamiento predeterminado
+                event.preventDefault();
+                // Obtener el valor del atributo "href" del enlace
+                var linkUrl = this.getAttribute('href');
+                // Abrir la URL en una nueva pestaña o ventana
+                window.open(linkUrl, '_blank');
+            });
+        }
+    </script>
+
+</body>
+
+</html>

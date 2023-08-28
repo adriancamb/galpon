@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bebederos de aves</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../styles/style.css" rel="stylesheet" />
+    <style>
+        #sub-accordion{
+            color: rgb(42, 120, 165);
+        }
+        .accordion-body {
+            padding: 0;
+        }
+        #sub-accordion .accordion-button:not(.collapsed) {
+            background-color: rgb(42, 120, 165); /* Cambia el color cuando el acordeón está expandido */
+            color: white; /* Cambia el color del texto cuando el acordeón está expandido */
+        }
+        #sub-sub-accordion .accordion-button:not(.collapsed) {
+            background-color: yellow; /* Cambia el color cuando el acordeón está expandido */
+            color: white; /* Cambia el color del texto cuando el acordeón está expandido */
+        }
+        
+        button.accordion-button {
+            padding: 10px;
+        }
+        a:hover {
+            color: orangered; /* Este es el color que se aplicará al hacer hover */
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="categorias">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+                        <a class="navbar-brand col-lg-3 me-0" href="../index.html" style="padding: 0px">
+                            <img src="../img/logo.gif" height="60" alt="" />
+                        </a>
+                        <div id="nav-container"></div>
+                        <ul id="json" class="navbar-nav col-lg-6 justify-content-lg-center"></ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-outline-warning" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <div class="col-md-2">
+              <div class="accordion" id="accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingJardin">
+                      <button class="accordion-button collapsed btn btn-warning" type="button"
+                       data-bs-toggle="collapse" data-bs-target="#collapseJardin" aria-expanded="false"
+                        aria-controls="collapseJardin"> Jardín</button>
+                    </h2>
+                    <div id="collapseJardin" class="accordion-collapse collapse" aria-labelledby="headingJardin">
+                      <div class="accordion-body ">
+                        <ul>
+                          <li><a href="productos/jardin.html">Jardín</a></li>
+                          <li><a href="productos/arrollamangueras.html">Arrollamangueras</a></li>
+                          <li><a href="productos/bebederos.html">Bebederos</a></li>
+                          <li><a href="productos/llamadores.html">Llamadores</a></li>
+                          <li><a href="productos/veletas.html">Veletas</a></li>
+                        </ul>
+                        <div class="accordion col-md-12" id="sub-accordion">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="subheadingJardin">
+                              <button class="accordion-button collapsed" style="padding: 2px 20px" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSubMueblesJardin" aria-expanded="false" aria-controls="collapseSubMueblesJardin">
+                                Muebles de Jardín
+                              </button>
+                            </h2>
+                            <div id="collapseSubMueblesJardin" class="accordion-collapse collapse" aria-labelledby="subheadingJardin" data-bs-parent="#sub-accordion">
+                              <div class="accordion-body">
+                                <ul>
+                                  <li><a href="productos/fundicion-de-aluminio.html">Fundición de aluminio</a></li>
+                                  <li><a href="productos/funcion-de-hierro.html">Función de hierro</a></li>
+                                  <li><a href="productos/hierro-forjado.html">Hierro forjado</a></li>
+                                </ul>
+                                <div class="accordion col-md-12" id="sub-sub-accordion">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="subheadingJardin2">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSubSubMueblesJardin" aria-expanded="false" aria-controls="collapseSubSubMueblesJardin">
+                                        Sub Muebles de Jardín
+                                      </button>
+                                    </h2>
+                                    <div id="collapseSubSubMueblesJardin" class="accordion-collapse collapse" aria-labelledby="subsubheadingJardin" data-bs-parent="#sub-sub-accordion">
+                                      <div class="accordion-body">
+                                        <ul>
+                                          <li><a href="productos/fundicion-de-aluminio.html">Fundición de aluminio</a></li>
+                                          <li><a href="productos/funcion-de-hierro.html">Función de hierro</a></li>
+                                          <li><a href="productos/hierro-forjado.html">Hierro forjado</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Collapsible Group Item #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                        Anim pariatur cliche reprehenderit
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../productos/categorias.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<!--
+    {
+    "categorias": [
+        {
+            "nombre": "Jardín",
+            "url": "productos/jardin.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "destacado": false,
+            "productos": [
+                {
+                    "nombre": "Arrollamangueras",
+                    "url": "productos/arrollamangueras.html",
+                    "imagen": "img/arrollamanguera.jpg",
+                    "descripcion": "Arrollamanguera de distintos tipos",
+                    "destacado": true
+                },
+                {
+                    "nombre": "Bebederos",
+                    "url": "productos/bebederos.html",
+                    "imagen": "img/bebederos.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": true
+                },
+                {
+                    "nombre": "Llamadores",
+                    "url": "productos/llamadores.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Veletas",
+                    "url": "productos/veletas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Muebles de Jardín",
+                    "url": "productos/muebles-de-jardin.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Fundición de aluminio",
+                            "url": "productos/fundicion-de-aluminio.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Función de hierro",
+                            "url": "productos/funcion-de-hierro.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Hierro forjado",
+                            "url": "productos/hierro-forjado.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        }
+                    ]
+                }
+            ]
+        }       
+    ]
+}
+-->

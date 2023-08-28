@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<body>
+    
+    <ul id="productList">
+    </ul>
+
+    <script>
+function createCategoryElement(category) {
+    const categoryContainer = document.createElement("div");
+    categoryContainer.classList.add("category");
+
+    const nombreBuscado = document.createElement("h2");
+    nombreBuscado.textContent = category.nombre;
+
+    const categoryDescription = document.createElement("p");
+    categoryDescription.textContent = category.descripcion;
+
+    const productsContainer = document.createElement("div");
+    productsContainer.classList.add("products");
+
+    if (category.productos && category.productos.length > 0) {
+        category.productos.forEach((product) => {
+            const productElement = createProductElement(product);
+            productsContainer.appendChild(productElement);
+        });
+    }
+
+    if (category.subproductos && category.subproductos.length > 0) {
+        category.subproductos.forEach((subproduct) => {
+            const subproductElement = createProductElement(subproduct);
+            productsContainer.appendChild(subproductElement);
+        });
+    }
+
+    categoryContainer.appendChild(nombreBuscado);
+    categoryContainer.appendChild(categoryDescription);
+    categoryContainer.appendChild(productsContainer);
+
+    return categoryContainer;
+}
+
+
+
+function createProductElement(product) {
+    const productContainer = document.createElement("div");
+    productContainer.classList.add("product");
+
+    const productName = document.createElement("h3");
+    productName.textContent = product.nombre;
+
+    const productImage = document.createElement("img");
+    productImage.src = product.imagen;
+    productImage.alt = product.nombre;
+
+    const productDescription = document.createElement("p");
+    productDescription.textContent = product.descripcion;
+
+    productContainer.appendChild(productName);
+    productContainer.appendChild(productImage);
+    productContainer.appendChild(productDescription);
+
+    return productContainer;
+}
+function findCategoryByName(categorias, nombreBuscado) {
+    for (const category of categorias) {
+        if (category.nombre === nombreBuscado) {
+            return category;
+        }
+        if (category.productos) {
+            const foundSubcategory = findCategoryByName(category.productos, nombreBuscado);
+            if (foundSubcategory) {
+                return foundSubcategory;
+            }
+        }
+        if (category.subproductos) {
+            const foundSubcategory = findCategoryByName(category.subproductos, nombreBuscado);
+            if (foundSubcategory) {
+                return foundSubcategory;
+            }
+        }
+    }
+    return undefined;
+}
+
+// Load the JSON data
+fetch("../productos/categorias.json")
+    .then((response) => response.json())
+    .then((data) => {
+        const woksCategory = findCategoryByName(data.categorias, "Calefacción");
+
+        if (woksCategory) {
+            // Muestra la información completa de woksCategory en la consola
+            console.log(woksCategory);
+
+            const woksCategoryElement = createCategoryElement(woksCategory);
+            document.body.appendChild(woksCategoryElement);
+        } else {
+            console.log("Categoría 'Woks' no encontrada en el JSON.");
+        }
+    })
+    .catch((error) => {
+        console.error("Error al cargar el archivo JSON:", error);
+    });
+    </script>
+</body>
+</html>

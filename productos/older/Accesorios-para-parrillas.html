@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script>
+        // Obtiene el nombre del archivo HTML actual
+        var currentFile = window.location.pathname.split('/').pop();
+        // Remueve la extensión ".html" del nombre del archivo
+        var categoryName = currentFile.slice(0, -5);
+        
+        // Asigna el valor a la variable nombreCategoria
+        var nombreCategoria = categoryName;
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pagina-titulo"></title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+    <link href="../styles/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> <!-- ícono de carrito de compra  -->
+    <link href="../styles/_reboot.scss" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous">
+    </script>
+    <script src="/productos/productosDeCategoria.js"></script>
+    <!-- <script src="js/imagenZoomable.js"></script> -->
+    <style>
+        #sub-accordion{
+            color: rgb(42, 120, 165);
+        }
+        .accordion-body {
+            padding: 0;
+        }
+        #sub-accordion .accordion-button:not(.collapsed) {
+            background-color: rgb(42, 120, 165); /* Cambia el color cuando el acordeón está expandido */
+            color: white; /* Cambia el color del texto cuando el acordeón está expandido */
+        }
+        
+        button.accordion-button {
+            padding: 10px;
+        }
+        a:hover {
+            color: orangered; /* Este es el color que se aplicará al hacer hover */
+        }
+        .vista-miniatura img {
+            width: 200px; /* Ancho deseado para la imagen en tamaño pequeño */
+            height: auto; 
+
+        }
+        .vista-miniatura {
+            padding: 10px;
+            width: 250px; /* Ancho deseado para la imagen en tamaño pequeño */
+            height: auto; 
+            border: 1px solid black; /* Borde sólido de 1 píxel de color gris */
+            border-radius: 15px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .contenedor-productos {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columnas de ancho igual */
+            grid-gap: 10px; /* Espacio entre las vistas en miniatura */
+        }
+    </style>
+
+
+</head>
+
+<body>
+    
+    <main>
+        <div class="categorias"> <!--   <div class="container">-->
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+                        <a class="navbar-brand col-lg-3 me-0" href="../index.html" style="padding: 0px"><img
+                                src="../img/logo.gif" height="60" alt="" ; />
+                        </a>
+                        <div id="nav-container"></div>
+
+                        <ul id="json" class="navbar-nav col-lg-6 justify-content-lg-center">
+                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                            <script src="../productos/categorias.js"></script>
+                        </ul>
+
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-outline-warning" type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="row">
+                        <!-- Menu lateral -->
+                <div class="col-md-2">
+                    <div class="accordion" id="accordion">
+                        <script src="/productos/categoriasLateral.js"></script>
+                    </div>
+                </div>
+                        <!-- Producto -->
+                <div class="col-md-10">
+                    <div id="contenedor-productos"></div>
+
+                    <script>
+                      // Llamar a la función mostrarVistasMiniatura y pasar el nombre de la categoría
+                      mostrarVistasMiniatura(nombreCategoria);
+                      document.getElementById('pagina-titulo').innerText = nombreCategoria;
+                    </script>
+                </div>
+                
+            </div>
+        
+    </main>
+
+
+
+</body>
+
+</html>
+

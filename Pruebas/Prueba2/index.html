@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<?php
+// Abrir la conexión con la base de datos
+$db = new SQLite3('database.sqlite');
+
+// Obtener las categorías principales
+$query = "SELECT * FROM categorias WHERE padre_id IS NULL ORDER BY izquierda";
+$result = $db->query($query);
+
+// Función recursiva para obtener las subcategorías
+function obtenerSubcategorias($db, $padre_id) {
+    $query = "SELECT * FROM categorias WHERE padre_id = $padre_id ORDER BY izquierda";
+    $result = $db->query($query);
+
+    $subcategorias = array();
+    while ($row = $result->fetchArray()) {
+        $subcategoria = array(
+            'id' => $row['id'],
+            'nombre' => $row['nombre'],
+            'url' => $row['url'],
+            'imagen' => $row['imagen'],
+            'subcategorias' => obtenerSubcategorias($db, $row['id'])
+        );
+        $subcategorias[] = $subcategoria;
+    }
+
+    return $subcategorias;
+}
+
+// Crear la estructura de árbol de categorías
+$categorias = array();
+while ($row = $result->fetchArray()) {
+    $categoria = array(
+        'id' => $row['id'],
+        'nombre' => $row['nombre'],
+        'url' => $row['url'],
+        'imagen' => $row['imagen'],
+        'subcategorias' => obtenerSubcategorias($db, $row['id'])
+    );
+    $categorias[] = $categoria;
+}
+
+// Función recursiva para crear el HTML del menú
+function crearMenuHTML($categorias) {
+    $menuHTML = '';
+    foreach ($categorias as $categoria) {
+        $menuHTML .= '<li class="nav-item dropdown">';
+        $menuHTML .= '<a class="nav-link dropdown-toggle" href="' . $categoria['url'] . '" data-bs-toggle="dropdown" aria-expanded="false">' . $categoria['nombre'] . '</a>';
+
+        if (count($categoria['subcategorias']) > 0) {
+            $menuHTML .= '<ul class="dropdown-menu">';
+            $menuHTML .= crearMenuHTML($categoria['subcategorias']);
+            $menuHTML .= '</ul>';
+        }
+
+        $menuHTML .= '</li>';
+    }
+
+    return $menuHTML;
+}
+
+// Crear el HTML del menú
+$menuHTML = crearMenuHTML($categorias);
+echo $menuHTML;
+?>
+
+
+
+    
+</body>
+</html>

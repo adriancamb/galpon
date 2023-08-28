@@ -1,0 +1,111 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producto - Arrollamangueras</title>
+  <style>
+    /* Estilo de la imagen */
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Estilo de la imagen con zoom */
+    .zoomable {
+      transition: transform 0.5s ease;
+      /* Agrega una transición suave */
+      width: 200px;
+    }
+
+    .zoomable:hover {
+      transform: scale(2);
+      width: 400px;
+      /* Hace un zoom de 2 veces al pasar el mouse por encima */
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+
+    }
+
+    .zoom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      background-size: 300% 300%;
+      background-position: center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .image-container:hover .zoom {
+      opacity: 1;
+      pointer-events: auto;
+      
+    }
+
+    .image-container:hover .zoom {
+      background-image: url('../../img/arrollamanguera.jpg');
+      background-size: 300% 300%;
+    }
+
+    .image-container:hover .zoom:hover {
+      background-size: 500% 500%;
+    }
+
+    .zoom-container {
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+
+<body style="background-color: white">
+  <main>
+    <div class="container">
+
+
+      <div class="zoom-container">
+        <img src="../img/arrollamanguera.jpg" alt="Arrollamanguera" class="img-fluid zoomable" />
+        <div class="zoom"></div>
+      </div>
+
+      <h1>Arrollamanguera</h1>
+      <p class="lead">Arrollamanguera de distintos tipos</p>
+      <h2>$19.99</h2>
+  </main>
+  <script>
+    const zoomContainer = document.querySelector('.zoom-container');
+    const zoom = zoomContainer.querySelector('.zoom');
+    const image = zoomContainer.querySelector('img');
+
+    zoomContainer.addEventListener('mousemove', function (e) {
+      const { left: x, top: y, width, height } = image.getBoundingClientRect();
+      const mouseX = e.clientX - x;
+      const mouseY = e.clientY - y;
+      const zoomSize = 2;
+
+      zoom.style.backgroundImage = `url(${image.src})`;
+      zoom.style.transform = `translate(-50%, -50%) scale(${zoomSize})`;
+      zoom.style.transition = 'all 0.2s ease-in-out';
+
+      const zoomX = (mouseX / width) * 100;
+      const zoomY = (mouseY / height) * 100;
+
+      zoom.style.backgroundPosition = `${zoomX}% ${zoomY}%`;
+    });
+
+    zoomContainer.addEventListener('mouseleave', function () {
+      zoom.style.transition = 'all 0.2s ease-in-out';
+      zoom.style.transform = 'translate(-50%, -50%) scale(1)';
+    });
+
+
+  </script>
+</body>
+
+</html>

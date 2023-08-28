@@ -1,0 +1,5 @@
+id  nombre                  url                                     imagen                           id_categoria  descripcion_reducida    descripcion                                    Destacado  precio  cantidad
+--  ----------------------  --------------------------------------  -------------------------------  ------------  ----------------------  ---------------------------------------------  ---------  ------  --------
+1   Bebedero hoja de parra  /productos/bebedero-hoja-de-parra.html  /img/bebedero-hoja-de-parra.jpg  3             bebedero hoja de parra  Bebedero hoja de parra para adornar tu jardín  0          3000.0  5       
+2   Bebedero mini           /productos/bebedero-mini.html           /img/bebedero-mini.jpg           3             bebedero mini           Bebedero mini para adornar tu jardín           0          2500.0  2       
+3   Bebedero ostra          /productos/bebedero-ostra.html          /img/bebedero-ostra.jpg          3             bebedero ostra          Bebedero ostra para adornar tu jardín          0          2800.0  3       

@@ -1,0 +1,395 @@
+{
+    "categorias": [
+        {
+            "nombre": "Jardín",
+            "url": "productos/jardin.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "destacado": false,
+            "productos": [
+                {
+                    "nombre": "Arrollamangueras",
+                    "url": "productos/arrollamangueras.html",
+                    "imagen": "img/arrollamanguera.jpg",
+                    "descripcion": "Arrollamanguera de distintos tipos",
+                    "destacado": true
+                },
+                {
+                    "nombre": "Bebederos",
+                    "url": "productos/bebederos.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": true
+                },
+                {
+                    "nombre": "Llamadores",
+                    "url": "productos/llamadores.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": true
+                },
+                {
+                    "nombre": "Veletas",
+                    "url": "productos/veletas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Muebles de Jardín",
+                    "url": "productos/muebles-de-jardin.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Fundición de aluminio",
+                            "url": "productos/fundicion-de-aluminio.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Función de hierro",
+                            "url": "productos/funcion-de-hierro.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Hierro forjado",
+                            "url": "productos/hierro-forjado.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Parrillas",
+            "url": "productos/parrillas.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "destacado": false,
+            "productos": [
+                {
+                    "nombre": "Accesorios para parrillas",
+                    "url": "productos/accesorios-para-parrillas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Asadores",
+                    "url": "productos/asadores.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Herrajes",
+                    "url": "productos/herrajes.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Parrillas a carbón o leña",
+                    "url": "productos/parrillas-a-carbon-o-lena.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Parrillas a gas",
+                    "url": "productos/parrillas-a-gas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                }
+            ]
+        },
+        {
+            "nombre": "Calefacción",
+            "url": "productos/calefaccion.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "destacado": false,
+            "productos": [
+                {
+                    "nombre": "Hogares",
+                    "url": "productos/hogares.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripción",
+                    "destacado": false
+                }
+            ]
+        },
+        {
+            "nombre": "Iluminación",
+            "url": "productos/iluminacion.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "destacado": false,
+            "productos": [
+                {
+                    "nombre": "Faroles",
+                    "url": "productos/faroles.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripción",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Faroles con columnas",
+                    "url": "productos/faroles-con-columnas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripción",
+                    "destacado": false
+                }
+            ]
+        },
+        {
+            "nombre": "Gastronomía",
+            "url": "productos/gastronomia.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "destacado": false,
+            "productos": [
+                {
+                    "nombre": "Calderos en hierro",
+                    "url": "productos/calderos-en-hierro.html",
+                    "imagen": "img/calderos-en-hierro.jpg",
+                    "descripcion": "calderos-en-hierro",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Calcerolas de fundicion",
+                    "url": "productos/cacerolas-de-fundicion.html",
+                    "imagen": "img/cacerolas-de-fundicion.jpg",
+                    "descripcion": "cacerolas-de-fundicion",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Enlonzadas",
+                            "url": "productos/cacerolas-de-fundicion-enlonzadas.html",
+                            "imagen": "img/cacerolas-de-fundicion-enlonzadas.jpg",
+                            "descripcion": "cacerolas-de-fundicion-enlozadas",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Sin enlonzar",
+                            "url": "productos/cacerolas-de-fundicion-sin-enlonzar.html",
+                            "imagen": "img/cacerolas-de-fundicion-sin-enlonzar.jpg",
+                            "descripcion": "cacerolas-de-fundicion-sin-enlozar",
+                            "destacado": false,
+                            "subproductos": [
+                                {
+                                    "nombre": "Ovaladas",
+                                    "url": "productos/cacerolas-de-fundicion-sin-enlonzar-ovaladas.html",
+                                    "imagen": "img/cacerolas-de-fundicion-sin-enlonzar-ovaladas.jpg",
+                                    "descripcion": "cacerolas-de-fundicion-sin-enlozar-ovaladas",
+                                    "destacado": false,
+                                    "subproductos": [
+                                        {
+                                            "nombre": "Doble función",
+                                            "url": "productos/cacerolas-de-fundicion-sin-enlonzar-ovaladas-doble-funcion.html",
+                                            "imagen": "img/cacerolas-de-fundicion-sin-enlonzar-ovaladas-doble-funcion.jpg",
+                                            "descripcion": "cacerolas-de-fundicion-sin-enlozar-ovaladas-doble-funcion",
+                                            "destacado": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Planchas para bifes",
+                    "url": "productos/planchas-para-bifes.html",
+                    "imagen": "img/planchas-para-bifes.jpg",
+                    "descripcion": "planchas-para-bifes",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Lisas",
+                            "url": "productos/planchas-para-bifes-lisas.html",
+                            "imagen": "img/planchas-para-bifes-lisas.jpg",
+                            "descripcion": "planchas-para-bifes-lisas",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Rayadas",
+                            "url": "productos/planchas-para-bifes-rayadas.html",
+                            "imagen": "img/planchas-para-bifes-rayadas.jpg",
+                            "descripcion": "planchas-para-bifes-rayadas",
+                            "destacado": false,
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlonzadas",
+                                    "url": "productos/planchas-para-bifes-rayadas-enlozadas.html",
+                                    "imagen": "img/planchas-para-bifes-rayadas-enlozadas.jpg",
+                                    "descripcion": "planchas-para-bifes-rayadas-enlozadas",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlonzar",
+                                    "url": "productos/planchas-para-bifes-rayadas-sin-enlozar.html",
+                                    "imagen": "img/planchas-para-bifes-rayadas-sin-enlozar.jpg",
+                                    "descripcion": "planchas-para-bifes-rayadas-sin-enlozar",
+                                    "destacado": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Provoleteras de fundicion",
+                    "url": "productos/provoleteras.html",
+                    "imagen": "img/provoleteras.html",
+                    "descripcion": "provoleteras",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Mangos de madera",
+                            "url": "productos/provoleteras-mango-de-madera.html",
+                            "imagen": "img/provoleteras-mango-de-madera.html",
+                            "descripcion": "provoleteras-mango-de-madera",
+                            "destacado": false,
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlonzadas",
+                                    "url": "productos/provoleteras-enlonzadas.html",
+                                    "imagen": "img/provoleteras-enlonzadas.jpg",
+                                    "descripcion": "provoleteras-enlozadas",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlonzar",
+                                    "url": "productos/provoleteras-sin-enlonzar.html",
+                                    "imagen": "img/provoleteras-sin-enlonzar.jpg",
+                                    "descripcion": "provoleteras-sin-enlozar",
+                                    "destacado": false
+                                }
+                            ]
+                        },
+                        {
+                            "nombre": "Mangos de fundicion",
+                            "url": "productos/provoleteras-mango-de-fundicion.html",
+                            "imagen": "img/provoleteras-mango-de-fundicion.jpg",
+                            "descripcion": "provoleteras-mango-de-fundicion",
+                            "destacado": false,
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlonzadas",
+                                    "url": "productos/provoleteras-enlonzadas.html",
+                                    "imagen": "img/provoleteras-enlonzadas.jpg",
+                                    "descripcion": "provoleteras-enlozadas",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlonzar",
+                                    "url": "productos/provoleteras-sin-enlonzar.html",
+                                    "imagen": "img/provoleteras-sin-enlonzar.jpg",
+                                    "descripcion": "provoleteras-sin-enlozar",
+                                    "destacado": false
+                                }
+                            ]
+                        },
+                        {
+                            "nombre": "De 15 porciones",
+                            "url": "productos/provoleteras-15-porciones.html",
+                            "imagen": "img/provoleteras-15-porciones.jpg",
+                            "descripcion": "provoleteras-15-porciones",
+                            "destacado": false,
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlonzadas",
+                                    "url": "productos/provoleteras-15-porciones-enlozadas.html",
+                                    "imagen": "img/provoletera-15-porcioness-enlonzadas.jpg",
+                                    "descripcion": "provoleteras-15-porciones-enlozadas",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlonzar",
+                                    "url": "productos/provoleteras-15-porciones-sin-enlonzar.html",
+                                    "imagen": "img/provoleteras-15-porciones-sin-enlonzar.jpg",
+                                    "descripcion": "provoleteras-15-porciones-sin-enlozar",
+                                    "destacado": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Asaderas en chapa plegada",
+                    "url": "productos/asaderas-en-chapa-plegada.html",
+                    "imagen": "img/asaderas-en-chapa-plegada.jpg",
+                    "descripcion": "asaderas-en-chapa-plegada",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Paelleras con 2 asas",
+                    "url": "productos/paelleras-con-2-asas.html",
+                    "imagen": "img/paelleras-con-2-asas.jpg",
+                    "descripcion": "paelleras-con-2-asas",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Enlonzadas",
+                            "url": "productos/paelleras-con-2-asas-enlozadas.html",
+                            "imagen": "img/paelleras-con-2-asas-enlonzadas.jpg",
+                            "descripcion": "paelleras-con-2-asas-enlozadas",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Sin enlonzar",
+                            "url": "productos/paelleras-con-2-asas-sin-enlonzar.html",
+                            "imagen": "img/paelleras-con-2-asas-sin-enlonzar.jpg",
+                            "descripcion": "paelleras-con-2-asas-sin-enlozar",
+                            "destacado": false
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Woks",
+                    "url": "productos/woks.html",
+                    "imagen": "img/woks.jpg",
+                    "descripcion": "woks",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Enlonzados",
+                            "url": "productos/woks-enlozados.html",
+                            "imagen": "img/woks-enlonzados.jpg",
+                            "descripcion": "woks-enlozados",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Sin enlonzar",
+                            "url": "productos/woks-sin-enlonzar.html",
+                            "imagen": "img/woks-sin-enlonzar.jpg",
+                            "descripcion": "woks-sin-enlozar",
+                            "destacado": false
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Sartén mango de planchuela",
+                    "url": "productos/sarten-mango-de-planchuela.html",
+                    "imagen": "img/sarten-mango-de-planchuela.jpg",
+                    "descripcion": "sarten-mango-de-planchuela",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Pizzera en chapa enlozada",
+                    "url": "productos/pizzera-en-chapa-enlozada.html",
+                    "imagen": "img/pizzera-en-chapa-enlozada.jpg",
+                    "descripcion": "pizzera-en-chapa-enlozada",
+                    "destacado": false
+                }
+            ]
+        }
+    ]
+}

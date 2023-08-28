@@ -1,0 +1,61 @@
+.card{
+    position: relative;
+    overflow: hidden;
+  }
+  .card-img-top{
+    border-color: red;  
+  }
+  
+  .card img{
+    transition: all .5s; 
+  }
+  .cardTexto{
+    width: 100%;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: justify;
+    height: 100%;
+    color: #fff;
+    transition: all .5s;
+  }
+  /*
+  .card:hover .cardTexto{
+    top: 0;
+   }
+  */
+   .masInfo{
+    background-color: transparent;
+    position: absolute;
+    bottom: 0%;
+   /* padding: 0 0 20px 120px;*/
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    transition: all .5s;
+  }
+  /*
+  .card:hover .masInfo{
+    bottom: -40%;
+   }
+  */
+  .cardTexto h5{
+    text-align: center;
+    font-size: 25px;
+    padding: 80px 10px;
+  }
+
+  .cardTexto p{
+    text-align: center;
+    font-size: 17px;
+    padding: 90px 10px;
+  }
+
+  /*
+   .card:hover img{
+    transform: scale(1.09);
+    filter: blur(8px);
+   }
+  
+  */

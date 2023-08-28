@@ -1,0 +1,100 @@
+{
+    "categorias": [
+        {
+            "nombre": "Gastronomía",
+            "url": "productos/gastronomia.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "destacado": false,
+            "productos": [
+                {
+                    "nombre": "Calderos en hierro",
+                    "url": "productos/calderos-en-hierro.html",
+                    "imagen": "img/calderos-en-hierro.jpg",
+                    "descripcion": "calderos-en-hierro",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Calcerolas de fundicion",
+                    "url": "productos/cacerolas-de-fundicion.html",
+                    "imagen": "img/cacerolas-de-fundicion.jpg",
+                    "descripcion": "cacerolas-de-fundicion",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Enlonzadas",
+                            "url": "productos/cacerolas-de-fundicion-enlonzadas.html",
+                            "imagen": "img/cacerolas-de-fundicion-enlonzadas.jpg",
+                            "descripcion": "cacerolas-de-fundicion-enlozadas",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Sin enlonzar",
+                            "url": "productos/cacerolas-de-fundicion-sin-enlonzar.html",
+                            "imagen": "img/cacerolas-de-fundicion-sin-enlonzar.jpg",
+                            "descripcion": "cacerolas-de-fundicion-sin-enlozar",
+                            "destacado": false,
+                            "subproductos": [
+                                {
+                                    "nombre": "Ovaladas",
+                                    "url": "productos/cacerolas-de-fundicion-sin-enlonzar-ovaladas.html",
+                                    "imagen": "img/cacerolas-de-fundicion-sin-enlonzar-ovaladas.jpg",
+                                    "descripcion": "cacerolas-de-fundicion-sin-enlozar-ovaladas",
+                                    "destacado": false,
+                                    "subproductos": [
+                                        {
+                                            "nombre": "Doble función",
+                                            "url": "productos/cacerolas-de-fundicion-sin-enlonzar-ovaladas-doble-funcion.html",
+                                            "imagen": "img/cacerolas-de-fundicion-sin-enlonzar-ovaladas-doble-funcion.jpg",
+                                            "descripcion": "cacerolas-de-fundicion-sin-enlozar-ovaladas-doble-funcion",
+                                            "destacado": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Planchas para bifes",
+                    "url": "productos/planchas-para-bifes.html",
+                    "imagen": "img/planchas-para-bifes.jpg",
+                    "descripcion": "planchas-para-bifes",
+                    "destacado": false,
+                    "subproductos": [
+                        {
+                            "nombre": "Lisas",
+                            "url": "productos/planchas-para-bifes-lisas.html",
+                            "imagen": "img/planchas-para-bifes-lisas.jpg",
+                            "descripcion": "planchas-para-bifes-lisas",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Rayadas",
+                            "url": "productos/planchas-para-bifes-rayadas.html",
+                            "imagen": "img/planchas-para-bifes-rayadas.jpg",
+                            "descripcion": "planchas-para-bifes-rayadas",
+                            "destacado": false,
+                            "subproductos": [
+                                {
+                                    "nombre": "Enlonzadas",
+                                    "url": "productos/planchas-para-bifes-rayadas-enlozadas.html",
+                                    "imagen": "img/planchas-para-bifes-rayadas-enlozadas.jpg",
+                                    "descripcion": "planchas-para-bifes-rayadas-enlozadas",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlonzar",
+                                    "url": "productos/planchas-para-bifes-rayadas-sin-enlozar.html",
+                                    "imagen": "img/planchas-para-bifes-rayadas-sin-enlozar.jpg",
+                                    "descripcion": "planchas-para-bifes-rayadas-sin-enlozar",
+                                    "destacado": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

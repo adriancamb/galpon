@@ -1,0 +1,10 @@
+$warning: #fd7e14;
+
+
+$theme-colors: (
+  "warning": $warning,
+
+);
+
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss"

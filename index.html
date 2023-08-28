@@ -1,0 +1,399 @@
+<!--
+
+https://bit.ly/3ine4Ge	
+
+https://www.youtube.com/watch?v=w-MwTwM_TbQ
+
+Git –version
+Git init
+Git config user.name “Adrián Cambres”
+Git config user.email “adriancamb@yahoo.com”
+Git status
+git add .
+git commit -m "Mensaje"
+git log
+git diff index.html
+git blame index.html
+git log --oneline
+git show 8d5e60e         
+
+git remote remove origin
+
+git remote add origin https://github.com/adriancamb/galpon.git
+
+git remote add origin https://github.com/adriancamb/galpon.git
+
+git pull https://github.com/adriancamb/galpon.git
+-->
+
+
+<!--
+d
+Abre el archivo JSON que contiene los nombres de archivo HTML en la carpeta raíz de tu proyecto.
+Usa el atajo de teclado "Ctrl + Shift + F" o "Cmd + Shift + F" para abrir la función "Buscar en archivos".
+
+En el campo "Buscar", ingresa la siguiente expresión regular: \"(\w+\.html)\"
+  
+  Esto buscará todos los nombres de archivo HTML que están dentro de comillas dobles en tu archivo JSON.
+
+En el campo "Reemplazar con", ingresa "productos/$1".
+  
+  Esto agregará la cadena "productos/" al principio del nombre de archivo HTML encontrado.
+
+  Asegúrate de que la opción "Usar expresiones regulares" esté habilitada en la función "Buscar en archivos".
+  Haz clic en "Reemplazar en archivos" para realizar el cambio en todo el archivo.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El galpón de Mario</title>
+  <!-- <link rel="stylesheet" href="./styles.css"/> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="./styles/style.css" rel="stylesheet">
+  <link href="./styles/_reboot.scss" rel="stylesheet">
+  <!-- Incluye jQuery para hacer la solicitud AJAX para leer las categorías desde el json -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="/js/categorias.js"></script>
+</head>
+
+<body style="background-color: white">
+  <main>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
+            aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+            <a class="navbar-brand col-lg-3 me-0" href="#" style="padding:0px"><img src="./img/logo.gif" height="60"
+                alt="" ;> </a>
+            <div id="nav-container"></div>
+
+            <ul id="json" class="navbar-nav col-lg-6 justify-content-lg-center">
+
+                         <!-- CTRL + K + C comentario  -->
+
+                    <!-- TENGO QUE PONER EL CÓDIGO ACÁ PORQUE GITHUB NO ME LEE EL JSON  -->
+            <!--  
+            <script>
+              fetch("./productos/categorias.json")
+
+                .then(response => response.json())
+                .then(data => {
+                  // Busca el contenedor donde se insertarán los productos
+                  const contenedor = document.getElementById("json");
+
+                  // Genera los productos para cada categoría
+                  data.categorias.forEach(categoria => {
+                    // Crea el elemento li para la categoría
+                    const itemCategoria = document.createElement('li');
+                    itemCategoria.classList.add('nav-item', 'dropdown');
+
+                    // Crea el elemento a para la categoría
+                    const linkCategoria = document.createElement('a');
+                    linkCategoria.classList.add('nav-link', 'dropdown-toggle');
+                    linkCategoria.href = categoria.url;
+                    linkCategoria.dataset.bsToggle = 'dropdown';
+                    linkCategoria.setAttribute('aria-expanded', 'false');
+                    linkCategoria.textContent = categoria.nombre;
+
+                    // Crea la lista de productos para la categoría
+                    const listaproductos = document.createElement('ul');
+                    listaproductos.classList.add('dropdown-menu');
+
+                    // Genera los productos para la categoría
+                    categoria.productos.forEach(item => {
+                      const itemLista = document.createElement('li');
+                      const linkItem = document.createElement('a');
+                      linkItem.classList.add('dropdown-item');
+                      linkItem.href = item.url;
+                      linkItem.textContent = item.nombre;
+
+                      itemLista.appendChild(linkItem);
+                      listaproductos.appendChild(itemLista);
+
+                      // Agrega los subproductos para el producto actual
+                      if (item.subproductos) {
+                        const subproductosLista = document.createElement('ul');
+                        subproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
+
+                        item.subproductos.forEach(subproducto => {
+                          const subproductoLista = document.createElement('li');
+                          const subproductoLink = document.createElement('a');
+                          subproductoLink.classList.add('dropdown-item');
+                          subproductoLink.href = subproducto.url;
+                          subproductoLink.textContent = subproducto.nombre;
+
+                          subproductoLista.appendChild(subproductoLink);
+
+                          // Agrega los sub-subproductos para el subproducto actual
+                          if (subproducto.subproductos) {
+                            const subsubproductosLista = document.createElement('ul');
+                            subsubproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
+                    
+                            subproducto.subproductos.forEach(subsubproducto => {
+                              const subsubproductoLista = document.createElement('li');
+                              const subsubproductoLink = document.createElement('a');
+                              subsubproductoLink.classList.add('dropdown-item');
+                              subsubproductoLink.href = subsubproducto.url;
+                              subsubproductoLink.textContent = subsubproducto.nombre;
+                    
+                              subsubproductoLista.appendChild(subsubproductoLink);
+                    
+                              // Agrega los sub-sub-subproductos para el sub-subproducto actual
+                              if (subsubproducto.subproductos) {
+                                const subsubsubproductosLista = document.createElement('ul');
+                                subsubsubproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
+                    
+                                subsubproducto.subproductos.forEach(subsubsubproducto => {
+                                  const subsubsubproductoLista = document.createElement('li');
+                                  const subsubsubproductoLink = document.createElement('a');
+                                  subsubsubproductoLink.classList.add('dropdown-item');
+                                  subsubsubproductoLink.href = subsubsubproducto.url;
+                                  subsubsubproductoLink.textContent = subsubsubproducto.nombre;
+                    
+                                  subsubsubproductoLista.appendChild(subsubsubproductoLink);
+                                  subsubsubproductosLista.appendChild(subsubsubproductoLista);
+                                });
+                    
+                                subsubproductoLista.classList.add('dropdown-submenu');
+                                subsubproductoLista.appendChild(subsubsubproductosLista);
+                              }
+                              //
+                              subsubproductosLista.appendChild(subsubproductoLista);
+                            });
+                    
+                            subproductoLista.classList.add('dropdown-submenu');
+                            subproductoLista.appendChild(subsubproductosLista);
+                          }
+                    
+                          subproductosLista.appendChild(subproductoLista);
+                        });
+                    
+                        itemLista.classList.add('dropdown-submenu');
+                        itemLista.appendChild(subproductosLista);
+                      }
+                    });
+                    
+                    // Agrega los elementos a la página
+                    itemCategoria.appendChild(linkCategoria);
+                    itemCategoria.appendChild(listaproductos);
+                    contenedor.appendChild(itemCategoria);
+                  console.log(contenedor.innerHTML);
+                  });
+                });
+            </script>
+              -->
+
+            </ul>
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+              <button class="btn btn-outline-warning" type="button" id="searchButton">Search</button>
+            </form>
+            <div id="searchResults" class="grid-container">
+              <!-- <script src="/js/busqueda.js"></script> -->
+                <!-- Aquí se mostrarán los resultados de búsqueda en la grilla -->
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+          <h1 class="display-4" style="font-family: Bernard MT condensed">El Galpón de Mario</h1>
+          <p class="lead">Parrillas y herrajes a medida - Muebles de Jardín - Faroles - Buzones y ¡mucho más!</p>
+        </div>
+      </div>
+
+      <!-- Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+        data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/img1.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p class="categoria">Muebles de jardín</p>
+              <p class="producto">Juegos de jardín - Bebederos de aves - Arrollamangueras </p>
+              <button class="btn btn-outline-light">Ver todos</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/img2.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p class="categoria">Decoración</p>
+              <p class="producto">Faroles - Campanas</p>
+              <button class="btn btn-outline-light">Ver todos</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/img3.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p class="categoria">Accesorios para la parrilla</p>
+              <p class="producto">Atizadores - Provoleteras - Planchas</p>
+              <button class="btn btn-outline-light">Ver todos</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h3 class="section-title section-title-center"><b></b>
+        <span class="section-title-main">Productos Destacados</span><b></b>
+      </h3>
+      <!-- Contenido principal -->
+      <!--
+<div class="container my-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 1">
+        <div class="card-body">
+          <h5 class="card-title">producto 1</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          <a href="#" class="btn btn-primary">Más información</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 2">
+        <div class="card-body">
+          <h5 class="card-title">producto 2</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          <a href="#" class="btn btn-primary">Más información</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 3">
+        <div class="card-body">
+          <h5 class="card-title">producto 3</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          <a href="#" class="btn btn-primary">Más información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+      <!-- contenedor vacío para que se agreguen las tarjetas de productos generadas dinámicamente:-->
+      <div id="productos-container" class="container my-5"></div>
+      <!-- crear las tarjetas de productos solo para los productos destacados:-->
+
+      <script>
+        // Leer el archivo JSON de productos
+        fetch("./productos/categorias.json")
+          .then(response => response.json())
+          .then(data => {
+            // Filtrar solo los productos destacados
+            const productosDestacados = data.categorias.reduce((acc, categoria) => {
+              const productos = categoria.productos.filter(producto => Boolean(producto.destacado));
+              return acc.concat(productos);
+            }, []);
+
+            // Crear el HTML para cada producto destacado
+            const productosHTML = productosDestacados.map(producto => `
+              <div class="col-sm-4">
+                <div class="card">
+                  <img src="${producto.imagen}" class="card-img-top" alt="Imagen de ${producto.nombre}">
+                  <div class="card-body">
+                    <div class="cardTexto">
+                      <h5 class="card-title">${producto.nombre}</h5>
+                      <p class="card-text">${producto.descripcion}</p>
+                    </div>
+                    <div class= "masInfo">
+                      <a href="${producto.url}" class="btn btn-warning" style="float: center";>Más información</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `).join('');
+
+            // Agregar el HTML de los productos destacados al contenedor
+            document.getElementById('productos-container').innerHTML = ` <div class="row">${productosHTML}</div> `;
+          });
+      </script>
+
+      <!-- Maps -->
+      <div class="map-container">
+        <iframe
+          src="https://maps.google.com/maps?q=Colectora Sur Acceso Oeste 7834, B1714 Ituzaingó&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+      </div>
+
+
+      <!-- Sección de contacto -->
+      <a name="contacto">
+        <div class="container mt-5">
+          <h4 class="text-center">Contacto</h4>
+          <p class="text-center">Completa el formulario para enviarnos un mensaje</p>
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp">
+              <small id="nombreHelp" class="form-text text-muted">Ingrese su nombre completo</small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">Ingrese un email válido</small>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </a>
+
+        <!-- Footer -->
+        <footer class="bg-light py-3">
+          <div class="container">
+            <p class="text-center">&copy; Diseñado por AAC - Todos los derechos reservados</p>
+          </div>
+        </footer>
+    </div>
+    
+
+
+        <!-- 
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script> const sass = require('node-sass')</script>
+        -->
+<script src="/js/busqueda.js"></script>
+</body>
+
+</html>

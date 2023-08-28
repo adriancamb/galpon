@@ -1,0 +1,393 @@
+{
+    "categorias": [
+        {
+            "nombre": "Jardín",
+            "url": "subcategorias/jardin.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "subcategorias": [
+                {
+                    "nombre": "Arrollamangueras",
+                    "url": "subcategorias/arrollamangueras.html",
+                    "imagen": "img/arrollamanguera.jpg",
+                    "descripcion": "Arrollamanguera de distintos tipos",
+                    "destacado": true
+                },
+                {
+                    "nombre": "Bebederos",
+                    "url": "subcategorias/bebederos.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": true
+                },
+                {
+                    "nombre": "Llamadores",
+                    "url": "subcategorias/llamadores.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": true
+                },
+                {
+                    "nombre": "Veletas",
+                    "url": "subcategorias/veletas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Muebles de Jardín",
+                    "url": "muebles-de-jardin.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "subcategorias": [
+                        {
+                            "nombre": "Fundición de aluminio",
+                            "url": "fundicion-de-aluminio.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Función de hierro",
+                            "url": "funcion-de-hierro.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Hierro forjado",
+                            "url": "hierro-forjado.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Parrillas",
+            "url": "subcategorias/parrillas.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "subcategorias": [
+                {
+                    "nombre": "Accesorios para parrillas",
+                    "url": "accesorios-para-parrillas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Asadores",
+                    "url": "subcategorias/asadores.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Herrajes",
+                    "url": "subcategorias/herrajes.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Parrillas a carbón o leña",
+                    "url": "parrillas-a-carbon-o-lena.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Parrillas a gas",
+                    "url": "parrillas-a-gas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                }
+            ]
+        },
+        {
+            "nombre": "Calefacción",
+            "url": "subcategorias/calefaccion.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "subcategorias": [
+                {
+                    "nombre": "Hogares",
+                    "url": "subcategorias/hogares.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "subcategorias": [
+                        {
+                            "nombre": "Accesorios para hogares",
+                            "url": "accesorios-para-hogares.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Salamandras",
+                            "url": "subcategorias/salamandras.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Iluminación",
+            "url": "subcategorias/iluminacion.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "subcategorias": [
+                {
+                    "nombre": "Faroles",
+                    "url": "subcategorias/faroles.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Faroles con columnas",
+                    "url": "faroles-con-columnas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                }
+            ]
+        },
+        {
+            "nombre": "Gastronomía",
+            "url": "subcategorias/gastronomia.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "subcategorias": [
+                {
+                    "nombre": "Calderos en hierro",
+                    "url": "calderos-en-hierro.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Cacerolas de fundición",
+                    "url": "cacerolas-de-fundicion.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "subcategorias": [
+                        {
+                            "nombre": "Enlozadas",
+                            "url": "subcategorias/enlozadas.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Sin enlozar",
+                            "url": "subcategorias/enlozadas.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "subcategorias": [
+                                {
+                                    "nombre": "Ovaladas",
+                                    "url": "subcategorias/ovaladas.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "subcategorias": [
+                                        {
+                                            "nombre": "Doble función",
+                                            "url": "doble-funcion.html",
+                                            "imagen": "img/imagen.jpg",
+                                            "descripcion": "Esta es la descripcion",
+                                            "destacado": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Planchas para bifes",
+                    "url": "planchas-para-bifes.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "subcategorias": [
+                        {
+                            "nombre": "Lisas",
+                            "url": "subcategorias/lisas.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Rayadas",
+                            "url": "subcategorias/rayadas.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "subcategorias": [
+                                {
+                                    "nombre": "Enlozadas",
+                                    "url": "subcategorias/enlozadas.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlozar",
+                                    "url": "sin-enlozar.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "destacado": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Provoleteras de fundición",
+                    "url": "subcategorias/provoleteras.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "subcategorias": [
+                        {
+                            "nombre": "Mango de madera",
+                            "url": "mango-de-madera.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "subcategorias": [
+                                {
+                                    "nombre": "Enlozadas",
+                                    "url": "subcategorias/enlozadas.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlozar",
+                                    "url": "sin-enlozar.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "destacado": false
+                                }
+                            ]
+                        },
+                        {
+                            "nombre": "Mango de fundición",
+                            "url": "mango-de-fundicion.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "subcategorias": [
+                                {
+                                    "nombre": "Enlozadas",
+                                    "url": "subcategorias/enlozadas.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlozar",
+                                    "url": "sin-enlozar.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "destacado": false
+                                }
+                            ]
+                        },
+                        {
+                            "nombre": "De 15 porciones",
+                            "url": "15-porciones.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "subcategorias": [
+                                {
+                                    "nombre": "Enlozadas",
+                                    "url": "subcategorias/enlozadas.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "destacado": false
+                                },
+                                {
+                                    "nombre": "Sin enlozar",
+                                    "url": "sin-enlozar.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "destacado": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Asaderas en chapa plegada",
+                    "url": "asaderas-en-chapa-plegada.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Paelleras con 2 asas",
+                    "url": "paelleras-con-2-asas.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "subcategorias": [
+                        {
+                            "nombre": "Enlozadas",
+                            "url": "subcategorias/enlozadas.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Sin enlozar",
+                            "url": "sin-enlozar.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Woks",
+                    "url": "subcategorias/woks.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "subcategorias": [
+                        {
+                            "nombre": "Enlozadas",
+                            "url": "subcategorias/enlozadas.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Sin enlozar",
+                            "url": "sin-enlozar.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Sartén mango de planchuela",
+                    "url": "sarten-mango-de-planchuela.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Pizzera en chapa enlozada",
+                    "url": "pizzera-en-chapa-enlozada.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                }
+            ]
+        }
+    ]
+}

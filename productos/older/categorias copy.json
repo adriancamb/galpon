@@ -1,0 +1,72 @@
+{
+    "categorias": [
+        {
+            "nombre": "Jardín",
+            "url": "productos/jardin.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "productos": [
+                {
+                    "nombre": "Arrollamangueras",
+                    "url": "productos/arrollamangueras.html",
+                    "imagen": "img/arrollamanguera.jpg",
+                    "descripcion": "Arrollamanguera de distintos tipos",
+                    "destacado": true
+                }
+            ]
+        },
+        {
+            "nombre": "Gastronomía",
+            "url": "productos/gastronomia.html",
+            "imagen": "img/imagen.jpg",
+            "descripcion": "Esta es la descripcion",
+            "productos": [
+                {
+                    "nombre": "Calderos en hierro",
+                    "url": "calderos-en-hierro.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "destacado": false
+                },
+                {
+                    "nombre": "Cacerolas de fundición",
+                    "url": "cacerolas-de-fundicion.html",
+                    "imagen": "img/imagen.jpg",
+                    "descripcion": "Esta es la descripcion",
+                    "subproductos": [
+                        {
+                            "nombre": "Enlozadas",
+                            "url": "productos/enlozadas.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "destacado": false
+                        },
+                        {
+                            "nombre": "Sin enlozar",
+                            "url": "productos/enlozadas.html",
+                            "imagen": "img/imagen.jpg",
+                            "descripcion": "Esta es la descripcion",
+                            "subproductos": [
+                                {
+                                    "nombre": "Ovaladas",
+                                    "url": "productos/ovaladas.html",
+                                    "imagen": "img/imagen.jpg",
+                                    "descripcion": "Esta es la descripcion",
+                                    "subproductos": [
+                                        {
+                                            "nombre": "Doble función",
+                                            "url": "doble-funcion.html",
+                                            "imagen": "img/imagen.jpg",
+                                            "descripcion": "Esta es la descripcion",
+                                            "destacado": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

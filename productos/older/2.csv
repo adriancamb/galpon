@@ -1,0 +1,25 @@
+1,Arrollamangueras,productos/arrollamangueras.html,img/arrollamanguera.jpg,Arrollamanguera de distintos tipos,1,,1
+2,Bebederos,productos/bebederos.html,img/imagen.jpg,Esta es la descripcion,1,,1
+3,Llamadores,productos/llamadores.html,img/imagen.jpg,Esta es la descripcion,1,,1
+4,Veletas,productos/veletas.html,img/imagen.jpg,Esta es la descripcion,0,,1
+5,Muebles de Jardín,productos/muebles-de-jardin.html,img/imagen.jpg,Esta es la descripcion,0,,1
+6,Fundición de aluminio,productos/fundicion-de-aluminio.html,img/imagen.jpg,Esta es la descripcion,0,5,1
+7,Función de hierro,productos/funcion-de-hierro.html,img/imagen.jpg,Esta es la descripcion,0,5,1
+8,Hierro forjado,productos/hierro-forjado.html,img/imagen.jpg,Esta es la descripcion,0,5,1
+9,Accesorios para parrillas,productos/accesorios-para-parrillas.html,img/imagen.jpg,Esta es la descripcion,0,,2
+10,Asadores,productos/asadores.html,img/imagen.jpg,Esta es la descripcion,0,,2
+11,Herrajes,productos/herrajes.html,img/imagen.jpg,Esta es la descripcion,0,,2
+12,Parrillas a carbón o leña,productos/parrillas-a-carbon-o-lena.html,img/imagen.jpg,Esta es la descripcion,0,,2
+13,Parrillas a gas,productos/parrillas-a-gas.html,img/imagen.jpg,Esta es la descripcion,0,,2
+14,Hogares,productos/hogares.html,img/imagen.jpg,Esta es la descripción,0,,3
+15,Faroles,productos/faroles.html,img/imagen.jpg,Esta es la descripción,0,,4
+16,Faroles con columnas,productos/faroles_con_columnas.html,img/imagen.jpg,Esta es la descripción,0,,4
+17,Calderos en hierro,productos/calderos_en_hierro.html,img/calderos_en_hierro.jpg,calderos_en_hierro,0,,5
+18,Calcerolas de fundicion,productos/cacerolas_de_fundicion.html,img/cacerolas_de_fundicion.jpg,cacerolas_de_fundicion,0,,5
+19,Enlonzadas,productos/cacerolas_de_fundicion_enlonzadas.html,img/cacerolas_de_fundicion_enlonzadas.jpg,cacerolas_de_fundicion_enlozadas,0,18,5
+20,Sin enlonzar,productos/cacerolas_de_fundicion_sin_enlonzar.html,img/cacerolas_de_fundicion_sin_enlonzar.jpg,cacerolas_de_fundicion_sin_enlozar,0,18,5
+21,Ovaladas,productos/cacerolas_de_fundicion_sin_enlonzar_ovaladas.html,img/cacerolas_de_fundicion_sin_enlonzar_ovaladas.jpg,cacerolas_de_fundicion_sin_enlozar_ovaladas,0,20,5
+22,Doble función,productos/cacerolas_de_fundicion_sin_enlonzar_ovaladas_doble_funcion.html,img/cacerolas_de_fundicion_sin_enlonzar_ovaladas_doble_funcion.jpg,cacerolas_de_fundicion_sin_enlozar_ovaladas_doble_funcion,0,21,5
+23,Planchas para bifes,productos/planchas-para-bifes.html,img/planchas-para-bifes.jpg,planchas-para-bifes,0,,5
+24,Lisas,productos/planchas-para-bifes_lisas.html,img/planchas-para-bifes_lisas.jpg,planchas-para-bifes_lisas,0,23,5
+25,Rayadas,productos/planchas-para-bifes_rayadas.html,img/planchas-para-bifes_rayadas.jpg,planchas-para-bifes_rayadas,0,23,5
