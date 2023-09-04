@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var nombreCategoria = currentFile.slice(0, -5).replace(/-/g, ' ');
   const titulo = document.getElementById('pagina-titulo');
   titulo.textContent = nombreCategoria;
-  console.log("nombreCategoria:", nombreCategoria)
+ // console.log("nombreCategoria:", nombreCategoria)
   // Llama a la función mostrarVistasMiniatura y pasa el nombre de la categoría
   mostrarVistasMiniatura(nombreCategoria);
   

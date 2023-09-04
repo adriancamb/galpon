@@ -88,13 +88,13 @@ async function obtenerIdCategoria(nombreCategoria) {
         for (let key in obj) {
           if (key === 'nombre') {
             const nombre = obj[key];
-            console.log("nombre:", nombre)
+           // console.log("nombre:", nombre)
             const nombreSinTilde = quitaTildes(nombre);
-          console.log("nombreSinTilde:", nombreSinTilde)
+         // console.log("nombreSinTilde:", nombreSinTilde)
             
             const nombreSeparado = nombreSinTilde.split(' ').join('-'); // Reemplaza espacios por "-"
             
-          console.log("nombreSeparado:", nombreSeparado)
+        //  console.log("nombreSeparado:", nombreSeparado)
             
             if (nombre.toLowerCase() === nombreCategoria.toLowerCase() || nombreSeparado.toLowerCase() === nombreCategoria.toLowerCase()|| nombreSinTilde.toLowerCase() === nombreCategoria.toLowerCase()) {
 

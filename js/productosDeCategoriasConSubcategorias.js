@@ -98,7 +98,7 @@ if (quitaTildes(producto.nombre) != nombreCategoria){
               mostrarProducto(foundCategory);
           } else {
               const mensajeError = document.createElement('p');
-              mensajeError.textContent = 'Información no encontrada.';
+              //mensajeError.textContent = 'Información no encontrada.';
               contenedorProductos.appendChild(mensajeError);
           }
       } catch (error) {

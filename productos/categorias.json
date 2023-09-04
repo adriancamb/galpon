@@ -212,16 +212,16 @@
                             "subproductos": [
                                 {
                                     "id": 26,
-                                    "nombre": "Cacerolas de fundicion Ovaladas",
-                                    "url": "/productos/Categorias/Gastronomia/Cacerolas-de-fundicion/Cacerolas-de-fundicion-sin-enlozar/Cacerolas-de-fundicion-Ovaladas.html",
+                                    "nombre": "Cacerolas de fundicion sin enlozar ovaladas",
+                                    "url": "/productos/Categorias/Gastronomia/Cacerolas-de-fundicion/Cacerolas-de-fundicion-sin-enlozar/Cacerolas-de-fundicion-sin-enlozar-ovaladas.html",
                                     "imagen": "/img/cacerolas-de-fundicion-ovaladas.jpg",
                                     "descripcion": "cacerolas-de-fundicion-sin-enlozar-ovaladas",
                                     "destacado": false
                                 },
                                 {
                                     "id": 27,
-                                    "nombre": "Cacerolas de fundicion doble función",
-                                    "url": "/productos/Categorias/Gastronomia/Cacerolas-de-fundicion/Cacerolas-de-fundicion-sin-enlozar/Cacerolas-de-fundicion-doble-funcion.html",
+                                    "nombre": "Cacerolas de fundicion sin enlozar doble función",
+                                    "url": "/productos/Categorias/Gastronomia/Cacerolas-de-fundicion/Cacerolas-de-fundicion-sin-enlozar/Cacerolas-de-fundicion-sin-enlozar-doble-funcion.html",
                                     "imagen": "/img/cacerolas-de-fundicion-doble-funcion.jpg",
                                     "descripcion": "cacerolas-de-fundicion-sin-enlozar-ovaladas-doble-funcion",
                                     "destacado": false
@@ -284,25 +284,25 @@
                     "subproductos": [
                         {
                             "id": 34,
-                            "nombre": "Provoleteras de fundición mangos de madera",
-                            "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mangos-de-madera.html",
-                            "imagen": "/img/provoleteras-de-fundicion-mangos-de-madera.jpg",
+                            "nombre": "Provoleteras de fundición mango de madera",
+                            "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-madera.html",
+                            "imagen": "/img/provoleteras-de-fundicion-mango-de-madera.jpg",
                             "descripcion": "provoleteras-mango-de-madera",
                             "destacado": false,
                             "subproductos": [
                                 {
                                     "id": 35,
-                                    "nombre": "Provoleteras de fundición mangos de madera enlozadas",
-                                    "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mangos-de-madera/Provoleteras-de-fundicion-mangos-de-madera-enlozadas.html",
-                                    "imagen": "/img/provoleteras-de-fundicion-mangos-de-madera-enlozadas.jpg",
+                                    "nombre": "Provoleteras de fundición mango de madera enlozadas",
+                                    "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-madera/Provoleteras-de-fundicion-mango-de-madera-enlozadas.html",
+                                    "imagen": "/img/provoleteras-de-fundicion-mango-de-madera-enlozadas.jpg",
                                     "descripcion": "provoleteras-enlozadas",
                                     "destacado": false
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "Provoleteras de fundición mangos de madera sin enlozar",
-                                    "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mangos-de-madera/Provoleteras-de-fundicion-mangos-de-madera-sin-enlozar.html",
-                                    "imagen": "/img/provoleteras-de-fundicion-mangos-de-madera-sin-enlozar.jpg",
+                                    "nombre": "Provoleteras de fundición mango de madera sin enlozar",
+                                    "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-madera/Provoleteras-de-fundicion-mango-de-madera-sin-enlozar.html",
+                                    "imagen": "/img/provoleteras-de-fundicion-mango-de-madera-sin-enlozar.jpg",
                                     "descripcion": "provoleteras-sin-enlozar",
                                     "destacado": false
                                 }
@@ -310,25 +310,25 @@
                         },
                         {
                             "id": 37,
-                            "nombre": "Provoleteras de fundición mangos de fundición",
-                            "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mangos-de-fundicion.html",
-                            "imagen": "/img/provoleteras-de-fundicion-mangos-de-fundicion.jpg",
+                            "nombre": "Provoleteras de fundición mango de fundición",
+                            "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion.html",
+                            "imagen": "/img/provoleteras-de-fundicion-mango-de-fundicion.jpg",
                             "descripcion": "provoleteras-mango-de-fundicion",
                             "destacado": false,
                             "subproductos": [
                                 {
                                     "id": 38,
-                                    "nombre": "Provoleteras de fundición mangos de fundición enlozadas",
-                                    "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mangos-de-fundicion/Provoleteras-de-fundicion-mangos-de-fundicion-enlozadas.html",
-                                    "imagen": "/img/provoleteras-de-fundicion-mangos-de-enlozadas.jpg",
+                                    "nombre": "Provoleteras de fundicion mango de fundicion enlozadas",
+                                    "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion-enlozadas.html",
+                                    "imagen": "/img/provoleteras-de-fundicion-mango-de-enlozadas.jpg",
                                     "descripcion": "provoleteras-enlozadas",
                                     "destacado": false
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "Provoleteras de fundición mangos de fundición sin enlozar",
-                                    "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mangos-de-fundicion/Provoleteras-de-fundicion-mangos-de-fundicion-sin-enlozar.html",
-                                    "imagen": "/img/provoleteras-de-fundicion-mangos-de-sin-enlozar.jpg",
+                                    "nombre": "Provoleteras de fundicion mango de fundicion sin enlozar",
+                                    "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion-sin-enlozar.html",
+                                    "imagen": "/img/provoleteras-de-fundicion-mango-de-sin-enlozar.jpg",
                                     "descripcion": "provoleteras-sin-enlozar",
                                     "destacado": false
                                 }

@@ -5,12 +5,17 @@ https://bit.ly/3ine4Ge
 https://www.youtube.com/watch?v=w-MwTwM_TbQ
 
 Git –version
+Git status
 Git init
 Git config user.name “Adrián Cambres”
 Git config user.email “adriancamb@yahoo.com”
-Git status
+git branch -M main
+git remote add origin https://github.com/adriancamb/galpon.git
+
 git add .
 git commit -m "Mensaje"
+git push -u origin main
+
 git log
 git diff index.html
 git blame index.html
@@ -19,9 +24,7 @@ git show 8d5e60e
 
 git remote remove origin
 
-git remote add origin https://github.com/adriancamb/galpon.git
 
-git remote add origin https://github.com/adriancamb/galpon.git
 
 git pull https://github.com/adriancamb/galpon.git
 -->
@@ -310,40 +313,6 @@ En el campo "Reemplazar con", ingresa "productos/$1".
       <div id="productos-container" class="container my-5"></div>
       <!-- crear las tarjetas de productos solo para los productos destacados:-->
 
-      <script>
-        // Leer el archivo JSON de productos
-        fetch("./productos/categorias.json")
-          .then(response => response.json())
-          .then(data => {
-            // Filtrar solo los productos destacados
-            const productosDestacados = data.categorias.reduce((acc, categoria) => {
-              const productos = categoria.productos.filter(producto => Boolean(producto.destacado));
-              return acc.concat(productos);
-            }, []);
-
-            // Crear el HTML para cada producto destacado
-            const productosHTML = productosDestacados.map(producto => `
-              <div class="col-sm-4">
-                <div class="card">
-                  <img src="${producto.imagen}" class="card-img-top" alt="Imagen de ${producto.nombre}">
-                  <div class="card-body">
-                    <div class="cardTexto">
-                      <h5 class="card-title">${producto.nombre}</h5>
-                      <p class="card-text">${producto.descripcion}</p>
-                    </div>
-                    <div class= "masInfo">
-                      <a href="${producto.url}" class="btn btn-warning" style="float: center";>Más información</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            `).join('');
-
-            // Agregar el HTML de los productos destacados al contenedor
-            document.getElementById('productos-container').innerHTML = ` <div class="row">${productosHTML}</div> `;
-          });
-      </script>
-
       <!-- Maps -->
       <div class="map-container">
         <iframe
@@ -354,29 +323,90 @@ En el campo "Reemplazar con", ingresa "productos/$1".
 
 
       <!-- Sección de contacto -->
-      <a name="contacto">
-        <div class="container mt-5">
-          <h4 class="text-center">Contacto</h4>
-          <p class="text-center">Completa el formulario para enviarnos un mensaje</p>
-          <form>
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp">
-              <small id="nombreHelp" class="form-text text-muted">Ingrese su nombre completo</small>
+      <div class="container mt-5">
+        <h4 class="text-center">Contacto</h4>
+        <p class="text-center">Completa el formulario para enviarnos un mensaje</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="miFormulario">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp" required>
+                        <small id="nombreHelp" class="form-text text-muted">Ingrese su nombre completo</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                        <small id="emailHelp" class="form-text text-muted">Ingrese un email válido (ejemplo: correo@example.com)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">Ingrese un email válido</small>
-            </div>
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea class="form-control" id="mensaje" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </form>
         </div>
-      </a>
+    </div>
+    
+    <!-- modal de Bootstrap -->
+    <div class="modal" id="mensajeModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Su mensaje se envió correctamente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="padding: 10px;"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Manejar el evento submit del formulario
+        document.getElementById('miFormulario').addEventListener('submit', function (event) {
+            // Evitar que el formulario se envíe de manera predeterminada
+            event.preventDefault();
+    
+            // Validar el formulario
+            if (this.checkValidity()) {
+                // Validar el formato del correo electrónico
+                const email = document.getElementById('email').value;
+                if (!validarCorreo(email)) {
+                    alert('Por favor, ingrese un correo electrónico válido.');
+                    return;
+                }
+    
+                // Si el formulario es válido, recopilar los datos
+                const nombre = document.getElementById('nombre').value;
+                const mensaje = document.getElementById('mensaje').value;
+    
+                // Mostrar la información en el modal
+                const modalContent = document.querySelector('#mensajeModal .modal-body');
+                modalContent.innerHTML = `
+                    <p>Asunto: Nuevo mensaje de contacto</p>
+                    <p>Nombre: ${nombre}</p>
+                    <p>Email: ${email}</p>
+                    <p>Mensaje:</p>
+                    <p>${mensaje}</p>
+                `;
+    
+                // Abre el modal
+                const mensajeModal = new bootstrap.Modal(document.getElementById('mensajeModal'));
+                mensajeModal.show();
+            }
+        });
+    
+        // Función para validar el formato del correo electrónico
+        function validarCorreo(email) {
+            const regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+            return regex.test(email);
+        }
+    </script>
+    
 
         <!-- Footer -->
         <footer class="bg-light py-3">
@@ -394,6 +424,7 @@ En el campo "Reemplazar con", ingresa "productos/$1".
         <script> const sass = require('node-sass')</script>
         -->
 <script src="/js/busqueda.js"></script>
+<script src="/js/categoriasDestacadas.js"></script>
 </body>
 
 </html>

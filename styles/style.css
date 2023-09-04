@@ -13,6 +13,9 @@ strong {
   color: orangered; /* Este es el color que se aplicará al hacer hover */
 }
 
+.dropdown-menu{
+  z-index: 2000;
+}
 
 h1,h2,h3,h4,h5,h6 {
   color: #555;

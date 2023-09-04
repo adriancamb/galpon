@@ -20,7 +20,7 @@
 
 <body>
     <main>
-        <div class="categorias"> <!--   <div class="container">-->
+        <div class="categorias">            
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example">
                 <div class="container-fluid">
@@ -37,11 +37,13 @@
                         </ul>
 
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-warning" type="submit">
-                                Search
-                            </button>
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                            <button class="btn btn-outline-warning" type="button" id="searchButton">Search</button>
                         </form>
+                      <div id="searchResults" class="grid-container">
+                        <!-- <script src="/js/busqueda.js"></script> -->
+                          <!-- Aquí se mostrarán los resultados de búsqueda en la grilla -->
+                      </div>
                     </div>
                 </div>
             </nav>
@@ -53,62 +55,63 @@
                         <!-- <script src="/js/categoriasLateral.js"></script> -->
                     </div>
                 </div>
-                <!-- Producto -->
-                <div class="col-md-8">
-                    <div class="row">
-                        <span id="ruta-categoria"></span>
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img class="zoom-image" src="" alt="" class="img-fluid" id="product-image">
-                            </div>
-                        </div>
+                                <!-- Producto -->
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <span id="ruta-categoria"></span>
+                                        <div class="col-md-4">
+                                            <div class="image-container">
+                                                <img class="zoom-image" src="" alt="" class="img-fluid" id="product-image">
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-md-8"id="product-details" >
+                                            
+                                            <!-- <script>iniciarPagina(); </script> --> 
+                                            <!-- Contenido generado dinámicamente irá aquí -->
+                                        </div>
 
-                        <div class="col-md-8"id="product-details" >
-                            
-                            <!-- <script>iniciarPagina(); </script> --> 
-                            <!-- Contenido generado dinámicamente irá aquí -->
-                        </div>
-                        <!-- <div class="col-md-6">
-                          <h1 class="mt-3">Bebedero hoja de parra</h1>
-                          <h2 class="text-success">$5000</h2>
-                          <p class="text-muted">Disponibilidad: 5 unidades</p>
-                          <div class="mt-4">
-                            <p>Bebedero hoja de parra para adornar tu jardín.</p>
-                          </div>
-                        </div> -->
-                        
-                        <!-- Ruta categoria -->
-                        <div class="col-md-12">
-                            <h3 class="section-title section-title-center"><b></b>
-                                <span class="section-title-main">Productos de la misma categoría</span><b></b>
-                              </h3>
-                            
-                            
-                            <div id="contenedor-productos">
-                                <script>obtenerCategoriaDesdeURL(); </script>
-                            </div>
-                            <p></p>
-                            <footer class="bg-light py-3">
-                                <div class="container">
-                                  <p class="text-center">&copy; Diseñado por AAC - Todos los derechos reservados</p>
+                                        <div class="col-md-12">
+                                            <h3 class="section-title section-title-center"><b></b>
+                                                <span class="section-title-main">Productos de la misma categoría</span><b></b>
+                                              </h3>
+                                            
+                                            
+                                            <div id="contenedor-productos">
+                                                <script>obtenerCategoriaDesdeURL(); </script>
+                                            </div>
+                                            <p></p>
+                                            <footer class="bg-light py-3">
+                                                <div class="container">
+                                                  <p class="text-center">&copy; Diseñado por AAC - Todos los derechos reservados</p>
+                                                </div>
+                                            </footer>
+                                        </div>
+                
+                                    </div>
                                 </div>
-                            </footer>
-                        </div>
-
+                <!-- Ruta categoria -->
+                <div class="col-md-8">
+                    <span id="ruta-categoria"></span>
+                    <div id="contenedor-productos">
+                        <!-- <script>iniciarPagina(); </script> -->
                     </div>
-                </div>
 
+                </div>
             </div>
+
         </div>
 
     </main>
     <script src="/js/categorias.js"></script>
-    <script src="/js/imagenZoomable.js"></script>
     <script src="/js/categoriasLateral.js"></script>
+    <script src="/js/busqueda.js"></script>
+    <script src="/js/imagenZoomable.js"></script>
     <script src="/js/productos.js"></script> 
-    <script src="/js/productosDeCategoriaEnProductos.js"></script>
+    <script src="/js/productosDeCategoria.js"></script>
     <script src="/js/funcionesProductosDeCategorias.js"></script>
+    <script src="/js/productosDeCategoriaEnProductos.js"></script>
+
 </body>
 
 </html>
-
