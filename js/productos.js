@@ -46,7 +46,7 @@ async function obtenerProductoYMostrarDetalles(productUrl) {
 
 function getProductByName(products, productName) {
   for (const product of products) {
-    if (product.nombre.toLowerCase() === productName.toLowerCase()) {
+    if (quitaTildes(product.nombre.toLowerCase()) === quitaTildes(productName.toLowerCase())) {
       return product;
     }
   }

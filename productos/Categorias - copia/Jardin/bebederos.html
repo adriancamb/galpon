@@ -1,3 +1,4 @@
+<!-- Plantilla para categorias que tienen productos -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,6 +20,7 @@
 <body>
     <main>
         <div class="categorias">
+            
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example">
                 <div class="container-fluid">
@@ -38,10 +40,10 @@
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
                             <button class="btn btn-outline-warning" type="button" id="searchButton">Search</button>
                         </form>
-                        <div id="searchResults" class="grid-container">
-                            <!-- <script src="/js/busqueda.js"></script> -->
-                            <!-- Aquí se mostrarán los resultados de búsqueda en la grilla -->
-                        </div>
+                      <div id="searchResults" class="grid-container">
+                        <!-- <script src="/js/busqueda.js"></script> -->
+                          <!-- Aquí se mostrarán los resultados de búsqueda en la grilla -->
+                      </div>
                     </div>
                 </div>
             </nav>
@@ -73,8 +75,8 @@
     </main>
     <script src="/js/categorias.js"></script>
     <script src="/js/categoriasLateral.js"></script>
-    <script src="/js/productosDeCategoria.js"></script>
-    <!-- <script src="/js/productosDeCategoriasConSubcategorias.js"></script> -->
+    <script src="/js/productosDeCategoria.js"></script><!-- deberia de estar comentado si trae problemas en categorias con subcategorias -->
+    <script src="/js/productosDeCategoriasConSubcategorias.js"></script><!-- deberia de estar comentado si trae problemas en categorias sin subcategorias -->
     <script src="/js/funcionesProductosDeCategorias.js"></script>
     <script src="/js/busqueda.js"></script>
 </body>
