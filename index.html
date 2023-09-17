@@ -60,8 +60,8 @@ En el campo "Reemplazar con", ingresa "productos/$1".
   <!-- iconos de fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-  <link href="./styles/style.css" rel="stylesheet">
-  <link href="./styles/_reboot.scss" rel="stylesheet">
+  <link href="/styles/style.css" rel="stylesheet">
+  <link href="/styles/_reboot.scss" rel="stylesheet">
 
   <!-- Incluye jQuery para hacer la solicitud AJAX para leer las categorías desde el json -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -75,378 +75,177 @@ En el campo "Reemplazar con", ingresa "productos/$1".
   <main>
    
     <div class="container">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example" >
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
-            aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Thirteenth navbar example" >
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
+              aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-            <a class="navbar-brand col-lg-2 me-0" href="#" style="padding:0px"><img src="./img/logo.gif" height="60" alt="Logo galpon" ;> </a>
-            <div id="nav-container"></div>
+            <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+              <a class="navbar-brand col-lg-2 me-0" href="/index.html" style="padding:0px"><img src="/img/logo.gif" height="60" alt="Logo galpon" ;> </a>
+              <div id="nav-container"></div>
 
-            <ul id="json" class="navbar-nav col-lg-6 justify-content-lg-center">
-
-                         <!-- CTRL + K + C comentario  -->
-
-                    <!-- TENGO QUE PONER EL CÓDIGO ACÁ PORQUE GITHUB NO ME LEE EL JSON  -->
-            <!--  
-            <script>
-              fetch("./productos/categorias.json")
-
-                .then(response => response.json())
-                .then(data => {
-                  // Busca el contenedor donde se insertarán los productos
-                  const contenedor = document.getElementById("json");
-
-                  // Genera los productos para cada categoría
-                  data.categorias.forEach(categoria => {
-                    // Crea el elemento li para la categoría
-                    const itemCategoria = document.createElement('li');
-                    itemCategoria.classList.add('nav-item', 'dropdown');
-
-                    // Crea el elemento a para la categoría
-                    const linkCategoria = document.createElement('a');
-                    linkCategoria.classList.add('nav-link', 'dropdown-toggle');
-                    linkCategoria.href = categoria.url;
-                    linkCategoria.dataset.bsToggle = 'dropdown';
-                    linkCategoria.setAttribute('aria-expanded', 'false');
-                    linkCategoria.textContent = categoria.nombre;
-
-                    // Crea la lista de productos para la categoría
-                    const listaproductos = document.createElement('ul');
-                    listaproductos.classList.add('dropdown-menu');
-
-                    // Genera los productos para la categoría
-                    categoria.productos.forEach(item => {
-                      const itemLista = document.createElement('li');
-                      const linkItem = document.createElement('a');
-                      linkItem.classList.add('dropdown-item');
-                      linkItem.href = item.url;
-                      linkItem.textContent = item.nombre;
-
-                      itemLista.appendChild(linkItem);
-                      listaproductos.appendChild(itemLista);
-
-                      // Agrega los subproductos para el producto actual
-                      if (item.subproductos) {
-                        const subproductosLista = document.createElement('ul');
-                        subproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
-
-                        item.subproductos.forEach(subproducto => {
-                          const subproductoLista = document.createElement('li');
-                          const subproductoLink = document.createElement('a');
-                          subproductoLink.classList.add('dropdown-item');
-                          subproductoLink.href = subproducto.url;
-                          subproductoLink.textContent = subproducto.nombre;
-
-                          subproductoLista.appendChild(subproductoLink);
-
-                          // Agrega los sub-subproductos para el subproducto actual
-                          if (subproducto.subproductos) {
-                            const subsubproductosLista = document.createElement('ul');
-                            subsubproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
-                    
-                            subproducto.subproductos.forEach(subsubproducto => {
-                              const subsubproductoLista = document.createElement('li');
-                              const subsubproductoLink = document.createElement('a');
-                              subsubproductoLink.classList.add('dropdown-item');
-                              subsubproductoLink.href = subsubproducto.url;
-                              subsubproductoLink.textContent = subsubproducto.nombre;
-                    
-                              subsubproductoLista.appendChild(subsubproductoLink);
-                    
-                              // Agrega los sub-sub-subproductos para el sub-subproducto actual
-                              if (subsubproducto.subproductos) {
-                                const subsubsubproductosLista = document.createElement('ul');
-                                subsubsubproductosLista.classList.add('dropdown-menu', 'dropdown-submenu');
-                    
-                                subsubproducto.subproductos.forEach(subsubsubproducto => {
-                                  const subsubsubproductoLista = document.createElement('li');
-                                  const subsubsubproductoLink = document.createElement('a');
-                                  subsubsubproductoLink.classList.add('dropdown-item');
-                                  subsubsubproductoLink.href = subsubsubproducto.url;
-                                  subsubsubproductoLink.textContent = subsubsubproducto.nombre;
-                    
-                                  subsubsubproductoLista.appendChild(subsubsubproductoLink);
-                                  subsubsubproductosLista.appendChild(subsubsubproductoLista);
-                                });
-                    
-                                subsubproductoLista.classList.add('dropdown-submenu');
-                                subsubproductoLista.appendChild(subsubsubproductosLista);
-                              }
-                              //
-                              subsubproductosLista.appendChild(subsubproductoLista);
-                            });
-                    
-                            subproductoLista.classList.add('dropdown-submenu');
-                            subproductoLista.appendChild(subsubproductosLista);
-                          }
-                    
-                          subproductosLista.appendChild(subproductoLista);
-                        });
-                    
-                        itemLista.classList.add('dropdown-submenu');
-                        itemLista.appendChild(subproductosLista);
-                      }
-                    });
-                    
-                    // Agrega los elementos a la página
-                    itemCategoria.appendChild(linkCategoria);
-                    itemCategoria.appendChild(listaproductos);
-                    contenedor.appendChild(itemCategoria);
-                  console.log(contenedor.innerHTML);
-                  });
-                });
-            </script>
-              -->
-
-            </ul>
-
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" id="searchInput">
-              <button class="btn btn-outline-warning" type="button" id="searchButton">Buscar</button>
-            </form>
-            <div id="searchResults" class="grid-container">
-              <!-- <script src="/js/busqueda.js"></script> -->
+              <ul id="json" class="navbar-nav col-lg-6 justify-content-lg-center"></ul>
+              <!-- CTRL + K + C comentario  -->
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" id="searchInput">
+                <button class="btn btn-outline-warning" type="button" id="searchButton">Buscar</button>
+              </form>
+              <div id="searchResults" class="grid-container">
+                <!-- <script src="/js/busqueda.js"></script> -->
                 <!-- Aquí se mostrarán los resultados de búsqueda en la grilla -->
-            </div>
-             <!-- Icono Usuario -->
-            <div id="User" style="display: flex; margin: 7px; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" enable-background="new 0 0 16 16" version="1.1" viewBox="0 0 16 16" xml:space="preserve"><path id="path7" fill="#231f20" stroke="none" d="M8 .986A7.022 7.022 0 0 0 .986 8c0 1.874.73 3.635 2.055 4.959A6.965 6.965 0 0 0 8 15.014 7.022 7.022 0 0 0 15.014 8 7.022 7.022 0 0 0 8 .986zm0 1A6.021 6.021 0 0 1 14.014 8a5.984 5.984 0 0 1-1.606 4.074 5.836 5.836 0 0 0-2.564-1.754 2.999 2.999 0 0 0 1.11-2.326A2.997 2.997 0 0 0 7.94 5.006a2.997 2.997 0 0 0-2.988 3.012c0 .929.436 1.75 1.104 2.298a5.846 5.846 0 0 0-2.526 1.698A5.964 5.964 0 0 1 1.986 8 6.021 6.021 0 0 1 8 1.986zm-.035 4.02c1.097 0 1.988.892 1.988 2.012A1.988 1.988 0 0 1 8.03 10c-.029 0-.057-.006-.086-.006-.025 0-.049.005-.074.006a1.994 1.994 0 0 1-1.916-2.006c0-1.096.892-1.988 2.012-1.988zm-.096 4.992c.024.001.048.008.072.008h.024c.022 0 .04-.007.062-.008a4.84 4.84 0 0 1 3.643 1.752A5.963 5.963 0 0 1 8 14.014a5.965 5.965 0 0 1-3.742-1.31 4.848 4.848 0 0 1 3.611-1.706z"></path></svg>
-              <p style="margin: 0; align-self: center;">Mi cuenta</p>
-            </div>
-            <!-- Icono carrito -->
+              </div>
+              <!-- Icono Usuario -->
+              <div id="User" style="display: flex; margin: 7px; align-items: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" enable-background="new 0 0 16 16" version="1.1" viewBox="0 0 16 16" xml:space="preserve"><path id="path7" fill="#231f20" stroke="none" d="M8 .986A7.022 7.022 0 0 0 .986 8c0 1.874.73 3.635 2.055 4.959A6.965 6.965 0 0 0 8 15.014 7.022 7.022 0 0 0 15.014 8 7.022 7.022 0 0 0 8 .986zm0 1A6.021 6.021 0 0 1 14.014 8a5.984 5.984 0 0 1-1.606 4.074 5.836 5.836 0 0 0-2.564-1.754 2.999 2.999 0 0 0 1.11-2.326A2.997 2.997 0 0 0 7.94 5.006a2.997 2.997 0 0 0-2.988 3.012c0 .929.436 1.75 1.104 2.298a5.846 5.846 0 0 0-2.526 1.698A5.964 5.964 0 0 1 1.986 8 6.021 6.021 0 0 1 8 1.986zm-.035 4.02c1.097 0 1.988.892 1.988 2.012A1.988 1.988 0 0 1 8.03 10c-.029 0-.057-.006-.086-.006-.025 0-.049.005-.074.006a1.994 1.994 0 0 1-1.916-2.006c0-1.096.892-1.988 2.012-1.988zm-.096 4.992c.024.001.048.008.072.008h.024c.022 0 .04-.007.062-.008a4.84 4.84 0 0 1 3.643 1.752A5.963 5.963 0 0 1 8 14.014a5.965 5.965 0 0 1-3.742-1.31 4.848 4.848 0 0 1 3.611-1.706z"></path></svg>
+                <p style="margin: 0; align-self: center;">Mi cuenta</p>
+              </div>
+              <!-- Icono carrito -->
 
-            <div class="cart-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg>
-              <div class="cart-badge"><!-- al final está el script con la variable--></div>  
-            </div>
+              <div class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <div class="cart-badge"><!-- al final está el script con la variable--></div>  
+              </div>
 
-          </div>
-        </div>
-      </nav>
-
-      <!-- Jumbotron -->
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container text-center">
-          <h1 class="display-4" style="font-family: Bernard MT condensed">El Galpón de Mario</h1>
-          <p class="lead">Parrillas y herrajes a medida - Muebles de Jardín - Faroles - Buzones y ¡mucho más!</p>
-        </div>
-      </div>
-
-      <!-- Carousel -->
-      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
-        data-bs-interval="3000">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./img/img1.gif" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <p class="categoria">Muebles de jardín</p>
-              <p class="producto">Juegos de jardín - Bebederos de aves - Arrollamangueras </p>
-              <button class="btn btn-outline-light">Ver todos</button>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="./img/img2.gif" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <p class="categoria">Decoración</p>
-              <p class="producto">Faroles - Campanas</p>
-              <button class="btn btn-outline-light">Ver todos</button>
+        </nav>
+
+        <!-- header -->
+        <header>
+          <div class="container text-center">
+            <h1 class="display-4" style="font-family: Bernard MT condensed">El Galpón de Mario</h1>
+            <p class="lead">Parrillas y herrajes a medida - Muebles de Jardín - Faroles - Buzones y ¡mucho más!</p>
+          </div>
+        </header>
+
+        <!-- Carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+          data-bs-interval="3000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/img1.gif" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p class="categoria">Todo para tu jardín</p>
+                <p class="producto">Juegos de jardín - Bebederos de aves - Arrollamangueras </p>
+                <a href="/productos/Categorias/Jardin.html" class="btn btn-outline-light">Ver todos</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/img2.gif" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p class="categoria">Parrillas</p>
+                <p class="producto">Parrillas completas - Accesorios</p>
+                <a href="/productos/Categorias/Parrillas.html" class="btn btn-outline-light">Ver todos</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/img3.gif" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p class="categoria">Gastronomía</p>
+                <p class="producto">Planchas - Provoleteras - Cacerolas</p>
+                <a href="/productos/Categorias/Gastronomia.html" class="btn btn-outline-light">Ver todos</a>
+              </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="./img/img3.gif" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <p class="categoria">Accesorios para la parrilla</p>
-              <p class="producto">Atizadores - Provoleteras - Planchas</p>
-              <button class="btn btn-outline-light">Ver todos</button>
-            </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- Productos Destacados -->
+        <h3 class="section-title section-title-center"><b></b>
+          <span class="section-title-main">Productos Destacados</span><b></b>
+        </h3>
+        
+
+        <!-- contenedor vacío para que se agreguen las tarjetas de productos generadas dinámicamente:-->
+        <div id="productos-container" class="container my-5"></div>
+        <!-- crear las tarjetas de productos solo para los productos destacados:-->
+
+        <!-- Maps -->
+        <div class="map-container">
+          <iframe
+            src="https://maps.google.com/maps?q=Colectora Sur Acceso Oeste 7834, B1714 Ituzaingó&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+          </iframe>
+        </div>
+
+
+        <!-- Sección de contacto -->
+        <div class="container mt-5">
+          <h4 class="text-center">Contacto</h4>
+          <p class="text-center">Completa el formulario para enviarnos un mensaje</p>
+          <div class="row justify-content-center">
+              <div class="col-md-6">
+                  <form id="miFormulario">
+                      <div class="form-group">
+                          <label for="nombre">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp" required>
+                          <small id="nombreHelp" class="form-text text-muted">Ingrese su nombre completo</small>
+                      </div>
+                      <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                          <small id="emailHelp" class="form-text text-muted">Ingrese un email válido (ejemplo: correo@example.com)</small>
+                      </div>
+                      <div class="form-group">
+                          <label for="mensaje">Mensaje</label>
+                          <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+              </div>
           </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <h3 class="section-title section-title-center"><b></b>
-        <span class="section-title-main">Productos Destacados</span><b></b>
-      </h3>
-      <!-- Contenido principal -->
-      <!--
-<div class="container my-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 1">
-        <div class="card-body">
-          <h5 class="card-title">producto 1</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 2">
-        <div class="card-body">
-          <h5 class="card-title">producto 2</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/500x325" class="card-img-top" alt="Imagen de producto 3">
-        <div class="card-body">
-          <h5 class="card-title">producto 3</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
-      <!-- contenedor vacío para que se agreguen las tarjetas de productos generadas dinámicamente:-->
-      <div id="productos-container" class="container my-5"></div>
-      <!-- crear las tarjetas de productos solo para los productos destacados:-->
-
-      <!-- Maps -->
-      <div class="map-container">
-        <iframe
-          src="https://maps.google.com/maps?q=Colectora Sur Acceso Oeste 7834, B1714 Ituzaingó&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-        </iframe>
-      </div>
-
-
-      <!-- Sección de contacto -->
-      <div class="container mt-5">
-        <h4 class="text-center">Contacto</h4>
-        <p class="text-center">Completa el formulario para enviarnos un mensaje</p>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form id="miFormulario">
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp" required>
-                        <small id="nombreHelp" class="form-text text-muted">Ingrese su nombre completo</small>
+          <!-- modal de Bootstrap -->
+          <div class="modal" id="mensajeModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Su mensaje se envió correctamente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                        <small id="emailHelp" class="form-text text-muted">Ingrese un email válido (ejemplo: correo@example.com)</small>
+                    <div class="modal-body" style="padding: 10px;"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <!-- modal de Bootstrap -->
-    <div class="modal" id="mensajeModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Su mensaje se envió correctamente</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body" style="padding: 10px;"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
     
-    <script>
-        // Manejar el evento submit del formulario
-        document.getElementById('miFormulario').addEventListener('submit', function (event) {
-            // Evitar que el formulario se envíe de manera predeterminada
-            event.preventDefault();
-    
-            // Validar el formulario
-            if (this.checkValidity()) {
-                // Validar el formato del correo electrónico
-                const email = document.getElementById('email').value;
-                if (!validarCorreo(email)) {
-                    alert('Por favor, ingrese un correo electrónico válido.');
-                    return;
-                }
-    
-                // Si el formulario es válido, recopilar los datos
-                const nombre = document.getElementById('nombre').value;
-                const mensaje = document.getElementById('mensaje').value;
-    
-                // Mostrar la información en el modal
-                const modalContent = document.querySelector('#mensajeModal .modal-body');
-                modalContent.innerHTML = `
-                    <p>Asunto: Nuevo mensaje de contacto</p>
-                    <p>Nombre: ${nombre}</p>
-                    <p>Email: ${email}</p>
-                    <p>Mensaje:</p>
-                    <p>${mensaje}</p>
-                `;
-    
-                // Abre el modal
-                const mensajeModal = new bootstrap.Modal(document.getElementById('mensajeModal'));
-                mensajeModal.show();
-            }
-        });
-    
-        // Función para validar el formato del correo electrónico
-        function validarCorreo(email) {
-            const regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
-            return regex.test(email);
-        }
-    </script>
-    
-
         <!-- Footer -->
         <footer class="bg-light py-3">
           <div class="container">
             <p class="text-center">&copy; Diseñado por AAC - Todos los derechos reservados</p>
           </div>
         </footer>
+
     </div>
     
-
-
-        <!-- 
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <script> const sass = require('node-sass')</script>
-        -->
 <script src="/js/busqueda.js"></script>
 <script src="/js/categoriasDestacadas.js"></script>
 <script src="/js/carrito.js"></script>
-
+<script src="/js/formularioContacto.js"></script>
 </body>
 
 </html>

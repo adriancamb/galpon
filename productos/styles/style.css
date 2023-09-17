@@ -50,7 +50,6 @@ a:hover {
 .vista-miniatura img {
   width: 200px; /* Ancho deseado para la imagen en tamaño pequeño */
   height: auto; 
-
 }
 
 /*Productos de categoria*/
@@ -74,4 +73,27 @@ a:hover {
   padding-top: 20px;
 }
 
+.categorias-lista {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 10px; /* Espacio entre las vistas en miniatura */
+  padding-top: 20px;
+  border: 2px solid blue; 
+  border-radius: 15px; 
+}
+
+.vista-miniatura-ABM {
+  padding: 2px;
+  width: 400px; /* Ancho deseado para la imagen en tamaño pequeño */
+  height: auto; 
+  border: 2px solid orangered; 
+  border-radius: 15px; 
+  display: flex;
+  flex-direction: column;
+
+}
+.vista-miniatura-ABM img {
+  width: 60px; /* Ancho deseado para la imagen en tamaño pequeño */
+  height: auto; 
+}
 

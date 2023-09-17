@@ -11,13 +11,11 @@ async function mostrarVistasMiniatura(nombreCategoria) {
     const { id: idCategoriaObtenida, ruta: rutaCategoriaObtenida } = await obtenerIdCategoria(nombreCategoria);
     rutaCategoria(rutaCategoriaObtenida);
     
-
     const productosFiltrados = data.filter(function (producto) {
       const idCategoriaProducto = producto.id_categoria;
       return idCategoriaProducto === idCategoriaObtenida;
     });
    
-
     const contenedorProductos = document.getElementById('contenedor-productos');
     contenedorProductos.innerHTML = '';
     contenedorProductos.classList.add('contenedor-productos');
@@ -63,15 +61,13 @@ const rutaCategoriaElement = document.getElementById('ruta-categoria');
      // console.log("enlace:", enlace)
       return enlace;
     });
-                                                                //agrega flecha de Boostrap
+                                        //agrega flecha de Boostrap
     rutaCategoriaElement.innerHTML = enlaces.slice(0, -1).join(' <i class="bi bi-arrow-right"></i> ') + enlaces[enlaces.length - 1];
   }
 
-
 async function obtenerIdCategoria(nombreCategoria) {
   // console.log("nombreCategoria:", nombreCategoria)
-  try {
-    
+  try {    
     const response = await fetch('/productos/categorias.json');
     const data = await response.json();
     const categoriasPrincipales = data.categorias;
