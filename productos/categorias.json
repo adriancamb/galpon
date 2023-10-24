@@ -7,6 +7,7 @@
             "imagen": "/img/jardin.jpg",
             "descripcion": "Todo para tu Jardín",
             "destacado": false,
+            "nombre_corto": "Jardín",
             "productos": [
                 {
                     "id": 2,
@@ -14,7 +15,8 @@
                     "url": "/productos/Categorias/Jardin/Arrollamangueras.html",
                     "imagen": "/img/arrollamangueras.jpg",
                     "descripcion": "Arrollamanguera de distintos tipos",
-                    "destacado": true
+                    "destacado": false,
+                    "nombre_corto": "Arrollamangueras"
                 },
                 {
                     "id": 3,
@@ -22,7 +24,8 @@
                     "url": "/productos/Categorias/Jardin/Bebederos.html",
                     "imagen": "/img/bebederos.jpg",
                     "descripcion": "Esta es la descripcion",
-                    "destacado": true
+                    "destacado": true,
+                    "nombre_corto": "Bebederos"
                 },
                 {
                     "id": 4,
@@ -30,7 +33,8 @@
                     "url": "/productos/Categorias/Jardin/Llamadores.html",
                     "imagen": "/img/llamadores.jpg",
                     "descripcion": "Esta es la descripcion",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Llamadores"
                 },
                 {
                     "id": 5,
@@ -38,7 +42,8 @@
                     "url": "/productos/Categorias/Jardin/Veletas.html",
                     "imagen": "/img/veletas.jpg",
                     "descripcion": "Esta es la descripcion",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Veletas"
                 },
                 {
                     "id": 6,
@@ -47,6 +52,7 @@
                     "imagen": "/img/muebles-de-jardin.jpg",
                     "descripcion": "Esta es la descripcion",
                     "destacado": false,
+                    "nombre_corto": "Muebles de Jardín",
                     "subproductos": [
                         {
                             "id": 7,
@@ -54,7 +60,8 @@
                             "url": "/productos/Categorias/Jardin/Muebles-de-Jardin/Muebles-de-jardin-en-fundicion-de-aluminio.html",
                             "imagen": "/img/muebles-de-jardin-fundicion-de-aluminio.jpg",
                             "descripcion": "Esta es la descripcion",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "Fundición de aluminio"
                         },
                         {
                             "id": 8,
@@ -62,7 +69,8 @@
                             "url": "/productos/Categorias/Jardin/Muebles-de-Jardin/Muebles-de-jardin-en-fundicion-de-hierro.html",
                             "imagen": "/img/muebles-de-jardin-fundicion-de-hierro.jpg",
                             "descripcion": "Esta es la descripcion",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "Fundición de hierro"
                         },
                         {
                             "id": 9,
@@ -70,7 +78,8 @@
                             "url": "/productos/Categorias/Jardin/Muebles-de-Jardin/Muebles-de-jardin-en-hierro-forjado.html",
                             "imagen": "/img/muebles-de-jardin-en-hierro-forjado.jpg",
                             "descripcion": "Esta es la descripcion",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "hierro forjado"
                         }
                     ]
                 }
@@ -83,6 +92,7 @@
             "imagen": "/img/parrillas.jpg",
             "descripcion": "Esta es la descripcion",
             "destacado": false,
+            "nombre_corto": "Parrillas",
             "productos": [
                 {
                     "id": 11,
@@ -90,7 +100,8 @@
                     "url": "/productos/Categorias/Parrillas/Accesorios-para-parrillas.html",
                     "imagen": "/img/accesorios-para-parrillas.jpg",
                     "descripcion": "Esta es la descripcion",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Accesorios para parrillas"
                 },
                 {
                     "id": 12,
@@ -98,7 +109,8 @@
                     "url": "/productos/Categorias/Parrillas/Asadores.html",
                     "imagen": "/img/asadores.jpg",
                     "descripcion": "Esta es la descripcion",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Asadores"
                 },
                 {
                     "id": 13,
@@ -106,7 +118,8 @@
                     "url": "/productos/Categorias/Parrillas/Herrajes.html",
                     "imagen": "/img/herrajes.jpg",
                     "descripcion": "Esta es la descripcion",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Herrajes"
                 },
                 {
                     "id": 14,
@@ -114,7 +127,8 @@
                     "url": "/productos/Categorias/Parrillas/Parrillas-a-carbon-o-lena.html",
                     "imagen": "/img/parrillas-a-carbon-o-lena.jpg",
                     "descripcion": "Esta es la descripcion",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Parrillas a carbón o leña"
                 },
                 {
                     "id": 15,
@@ -122,7 +136,8 @@
                     "url": "/productos/Categorias/Parrillas/Parrillas-a-gas.html",
                     "imagen": "/img/parrillas-a-gas.jpg",
                     "descripcion": "Esta es la descripcion",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Parrillas a gas"
                 }
             ]
         },
@@ -133,6 +148,7 @@
             "imagen": "/img/calefaccion.jpg",
             "descripcion": "Esta es la descripcion",
             "destacado": false,
+            "nombre_corto": "Calefacción",
             "productos": [
                 {
                     "id": 17,
@@ -140,7 +156,8 @@
                     "url": "/productos/Categorias/Calefaccion/Hogares.html",
                     "imagen": "/img/hogares.jpg",
                     "descripcion": "Esta es la descripción",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Hogares"
                 }
             ]
         },
@@ -151,6 +168,7 @@
             "imagen": "/img/iluminacion.jpg",
             "descripcion": "Esta es la descripcion",
             "destacado": false,
+            "nombre_corto": "Iluminación",
             "productos": [
                 {
                     "id": 19,
@@ -158,7 +176,8 @@
                     "url": "/productos/Categorias/Iluminacion/Faroles.html",
                     "imagen": "/img/faroles.jpg",
                     "descripcion": "Esta es la descripción",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Faroles"
                 },
                 {
                     "id": 20,
@@ -166,7 +185,8 @@
                     "url": "/productos/Categorias/Iluminacion/Faroles-con-columnas.html",
                     "imagen": "/img/faroles-con-columnas.jpg",
                     "descripcion": "Esta es la descripción",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Faroles con columnas"
                 }
             ]
         },
@@ -177,6 +197,7 @@
             "imagen": "/img/gastronomia.jpg",
             "descripcion": "Esta es la descripcion",
             "destacado": false,
+            "nombre_corto": "Gastronomía",
             "productos": [
                 {
                     "id": 22,
@@ -184,7 +205,8 @@
                     "url": "/productos/Categorias/Gastronomia/Calderos-en-hierro.html",
                     "imagen": "/img/calderos-en-hierro.jpg",
                     "descripcion": "calderos-en-hierro",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Calderos en hierro"
                 },
                 {
                     "id": 23,
@@ -192,7 +214,8 @@
                     "url": "/productos/Categorias/Gastronomia/Cacerolas-de-fundicion.html",
                     "imagen": "/img/cacerolas-de-fundicion.jpg",
                     "descripcion": "cacerolas-de-fundicion",
-                    "destacado": false,
+                    "destacado": true,
+                    "nombre_corto": "Cacerolas de fundicion",
                     "subproductos": [
                         {
                             "id": 24,
@@ -200,7 +223,8 @@
                             "url": "/productos/Categorias/Gastronomia/Cacerolas-de-fundicion/Cacerolas-de-fundicion-enlozadas.html",
                             "imagen": "/img/cacerolas-de-fundicion-enlozadas.jpg",
                             "descripcion": "cacerolas-de-fundicion-enlozadas",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "enlozadas"
                         },
                         {
                             "id": 25,
@@ -209,6 +233,7 @@
                             "imagen": "/img/cacerolas-de-fundicion-sin-enlozar.jpg",
                             "descripcion": "cacerolas-de-fundicion-sin-enlozar",
                             "destacado": false,
+                            "nombre_corto": "sin enlozar",
                             "subproductos": [
                                 {
                                     "id": 26,
@@ -216,7 +241,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Cacerolas-de-fundicion/Cacerolas-de-fundicion-sin-enlozar/Cacerolas-de-fundicion-sin-enlozar-ovaladas.html",
                                     "imagen": "/img/cacerolas-de-fundicion-ovaladas.jpg",
                                     "descripcion": "cacerolas-de-fundicion-sin-enlozar-ovaladas",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "ovaladas"
                                 },
                                 {
                                     "id": 27,
@@ -224,7 +250,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Cacerolas-de-fundicion/Cacerolas-de-fundicion-sin-enlozar/Cacerolas-de-fundicion-sin-enlozar-doble-funcion.html",
                                     "imagen": "/img/cacerolas-de-fundicion-doble-funcion.jpg",
                                     "descripcion": "cacerolas-de-fundicion-sin-enlozar-ovaladas-doble-funcion",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "doble función"
                                 }
                             ]
                         }
@@ -237,6 +264,7 @@
                     "imagen": "/img/planchas-para-bifes.jpg",
                     "descripcion": "planchas-para-bifes",
                     "destacado": false,
+                    "nombre_corto": "Planchas para bifes",
                     "subproductos": [
                         {
                             "id": 29,
@@ -244,7 +272,8 @@
                             "url": "/productos/Categorias/Gastronomia/Planchas-para-bifes/Planchas-para-bifes-lisas.html",
                             "imagen": "/img/planchas-para-bifes-lisas.jpg",
                             "descripcion": "planchas-para-bifes-lisas",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "lisas"
                         },
                         {
                             "id": 30,
@@ -253,6 +282,7 @@
                             "imagen": "/img/planchas-para-bifes-rayadas.jpg",
                             "descripcion": "planchas-para-bifes-rayadas",
                             "destacado": false,
+                            "nombre_corto": "rayadas",
                             "subproductos": [
                                 {
                                     "id": 31,
@@ -260,7 +290,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Planchas-para-bifes/Planchas-para-bifes-rayadas/Planchas-para-bifes-rayadas-enlozadas.html",
                                     "imagen": "/img/planchas-para-bifes-rayadas-enlozadas.jpg",
                                     "descripcion": "planchas-para-bifes-rayadas-enlozadas",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "enlozadas"
                                 },
                                 {
                                     "id": 32,
@@ -268,7 +299,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Planchas-para-bifes/Planchas-para-bifes-rayadas/Planchas-para-bifes-rayadas-sin-enlozar.html",
                                     "imagen": "/img/planchas-para-bifes-rayadas-sin-enlozar.jpg",
                                     "descripcion": "planchas-para-bifes-rayadas-sin-enlozar",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "sin enlozar"
                                 }
                             ]
                         }
@@ -281,6 +313,7 @@
                     "imagen": "/img/provoleteras-de-fundicion.jpg",
                     "descripcion": "provoleteras",
                     "destacado": true,
+                    "nombre_corto": "Provoleteras de fundicion",
                     "subproductos": [
                         {
                             "id": 34,
@@ -289,6 +322,7 @@
                             "imagen": "/img/provoleteras-de-fundicion-mango-de-madera.jpg",
                             "descripcion": "provoleteras-mango-de-madera",
                             "destacado": false,
+                            "nombre_corto": "mango de madera",
                             "subproductos": [
                                 {
                                     "id": 35,
@@ -296,7 +330,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-madera/Provoleteras-de-fundicion-mango-de-madera-enlozadas.html",
                                     "imagen": "/img/provoleteras-de-fundicion-mango-de-madera-enlozadas.jpg",
                                     "descripcion": "provoleteras-enlozadas",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "enlozadas"
                                 },
                                 {
                                     "id": 36,
@@ -304,7 +339,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-madera/Provoleteras-de-fundicion-mango-de-madera-sin-enlozar.html",
                                     "imagen": "/img/provoleteras-de-fundicion-mango-de-madera-sin-enlozar.jpg",
                                     "descripcion": "provoleteras-sin-enlozar",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "sin enlozar"
                                 }
                             ]
                         },
@@ -315,6 +351,7 @@
                             "imagen": "/img/provoleteras-de-fundicion-mango-de-fundicion.jpg",
                             "descripcion": "provoleteras-mango-de-fundicion",
                             "destacado": false,
+                            "nombre_corto": "mango de fundición",
                             "subproductos": [
                                 {
                                     "id": 38,
@@ -322,7 +359,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion-enlozadas.html",
                                     "imagen": "/img/provoleteras-de-fundicion-mango-de-enlozadas.jpg",
                                     "descripcion": "provoleteras-enlozadas",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "enlozadas"
                                 },
                                 {
                                     "id": 39,
@@ -330,7 +368,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion/Provoleteras-de-fundicion-mango-de-fundicion-sin-enlozar.html",
                                     "imagen": "/img/provoleteras-de-fundicion-mango-de-sin-enlozar.jpg",
                                     "descripcion": "provoleteras-sin-enlozar",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "sin enlozar"
                                 }
                             ]
                         },
@@ -341,6 +380,7 @@
                             "imagen": "/img/provoleteras-de-15-porciones.jpg",
                             "descripcion": "provoleteras-15-porciones",
                             "destacado": false,
+                            "nombre_corto": "Provoleteras de 15 porciones",
                             "subproductos": [
                                 {
                                     "id": 41,
@@ -348,7 +388,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-15-porciones/Provoleteras-de-15-porciones-enlozadas.html",
                                     "imagen": "/img/provoleteras-de-15-porciones-enlozadas.jpg",
                                     "descripcion": "provoleteras-15-porciones-enlozadas",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "enlozadas"
                                 },
                                 {
                                     "id": 42,
@@ -356,7 +397,8 @@
                                     "url": "/productos/Categorias/Gastronomia/Provoleteras-de-fundicion/Provoleteras-de-15-porciones/Provoleteras-de-15-porciones-sin-enlozar.html",
                                     "imagen": "/img/provoleteras-de-15-porciones-sin-enlozar.jpg",
                                     "descripcion": "provoleteras-15-porciones-sin-enlozar",
-                                    "destacado": false
+                                    "destacado": false,
+                                    "nombre_corto": "sin enlozar"
                                 }
                             ]
                         }
@@ -368,7 +410,8 @@
                     "url": "/productos/Categorias/Gastronomia/Asaderas-en-chapa-plegada.html",
                     "imagen": "/img/asaderas-en-chapa-plegada.jpg",
                     "descripcion": "asaderas-en-chapa-plegada",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Asaderas en chapa plegada"
                 },
                 {
                     "id": 44,
@@ -377,6 +420,7 @@
                     "imagen": "/img/paelleras-con-2-asas.jpg",
                     "descripcion": "paelleras-con-2-asas",
                     "destacado": false,
+                    "nombre_corto": "Paelleras con 2 asas",
                     "subproductos": [
                         {
                             "id": 45,
@@ -384,7 +428,8 @@
                             "url": "/productos/Categorias/Gastronomia/Paelleras-con-2-asas/Paelleras-con-2-asas-enlozadas.html",
                             "imagen": "/img/paelleras-con-2-asas-enlozadas.jpg",
                             "descripcion": "paelleras-con-2-asas-enlozadas",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "enlozadas"
                         },
                         {
                             "id": 46,
@@ -392,7 +437,8 @@
                             "url": "/productos/Categorias/Gastronomia/Paelleras-con-2-asas/Paelleras-con-2-asas-sin-enlozar.html",
                             "imagen": "/img/paelleras-con-2-asas-sin-enlozar.jpg",
                             "descripcion": "paelleras-con-2-asas-sin-enlozar",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "sin enlozar"
                         }
                     ]
                 },
@@ -403,6 +449,7 @@
                     "imagen": "/img/woks.jpg",
                     "descripcion": "woks",
                     "destacado": false,
+                    "nombre_corto": "Woks",
                     "subproductos": [
                         {
                             "id": 48,
@@ -410,7 +457,8 @@
                             "url": "/productos/Categorias/Gastronomia/Woks/Woks-enlozados.html",
                             "imagen": "/img/woks-enlozados.jpg",
                             "descripcion": "woks-enlozados",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "enlozados"
                         },
                         {
                             "id": 49,
@@ -418,7 +466,8 @@
                             "url": "/productos/Categorias/Gastronomia/Woks/Woks-sin-enlozar.html",
                             "imagen": "/img/woks-sin-enlozar.jpg",
                             "descripcion": "woks-sin-enlozar",
-                            "destacado": false
+                            "destacado": false,
+                            "nombre_corto": "sin enlozar"
                         }
                     ]
                 },
@@ -428,7 +477,8 @@
                     "url": "/productos/Categorias/Gastronomia/Sarten-mango-de-planchuela.html",
                     "imagen": "/img/sarten-mango-de-planchuela.jpg",
                     "descripcion": "sarten-mango-de-planchuela",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Sartén mango de planchuela"
                 },
                 {
                     "id": 51,
@@ -436,7 +486,8 @@
                     "url": "/productos/Categorias/Gastronomia/Pizzera-en-chapa-enlozada.html",
                     "imagen": "/img/pizzera-en-chapa-enlozada.jpg",
                     "descripcion": "pizzera-en-chapa-enlozada",
-                    "destacado": false
+                    "destacado": false,
+                    "nombre_corto": "Pizzera en chapa enlozada"
                 }
             ]
         }

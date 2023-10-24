@@ -13,7 +13,7 @@ function generarAcordeones(data, parentElement) {
       categoriaButton.setAttribute('data-bs-target', '#collapse_' + index);
       categoriaButton.setAttribute('aria-expanded', 'false');
       categoriaButton.setAttribute('aria-controls', 'collapse_' + index);
-      categoriaButton.textContent = categoria.nombre;
+      categoriaButton.textContent = categoria.nombre_corto;
 
       categoriaHeader.appendChild(categoriaButton);
       categoriaItem.appendChild(categoriaHeader);
@@ -54,7 +54,7 @@ function generarSubproductos(subproductos, parentElement) {
       var subproductoItem = document.createElement('li');
       var subproductoLink = document.createElement('a');
       subproductoLink.href = subproducto.url;
-      subproductoLink.textContent = subproducto.nombre;
+      subproductoLink.textContent = subproducto.nombre_corto;
       subproductoItem.appendChild(subproductoLink);
       parentElement.appendChild(subproductoItem);
 
@@ -71,7 +71,7 @@ function generarProductos(productos, parentElement) {
       var productoItem = document.createElement('li');
       var productoLink = document.createElement('a');
       productoLink.href = producto.url;
-      productoLink.textContent = producto.nombre;
+      productoLink.textContent = producto.nombre_corto;
       productoItem.appendChild(productoLink);
       parentElement.appendChild(productoItem);
 

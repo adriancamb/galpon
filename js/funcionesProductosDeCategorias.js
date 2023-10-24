@@ -2,6 +2,77 @@ const quitaTildes = (str) => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 };
 
+async function mostrarVistasMiniaturaEdit(nombreCategoria) {
+        
+  try {
+    
+    const response = await fetch('/productos/productos.json');
+    const data = await response.json();
+    const { id: idCategoriaObtenida, ruta: rutaCategoriaObtenida } = await obtenerIdCategoria(nombreCategoria);
+    rutaCategoria(rutaCategoriaObtenida);
+    
+    const productosFiltrados = data.filter(function (producto) {
+      const idCategoriaProducto = producto.id_categoria;
+      return idCategoriaProducto === idCategoriaObtenida;
+    });
+   
+    const contenedorProductos = document.getElementById('contenedor-productos-edit');
+    contenedorProductos.innerHTML = '';
+    contenedorProductos.classList.add('contenedor-productos-edit');
+
+    productosFiltrados.forEach(function (producto) {
+      const vistaMiniatura = document.createElement('div');
+      vistaMiniatura.className = 'vista-miniatura-edit';
+
+      
+      
+      
+      
+      
+      const contenido =      
+        '<a href="' + producto.url + '">' + '<img src="' + producto.imagen + '" alt="' + producto.nombre + '">' + '</a>' +
+        '<h3><a href="' + producto.url + '">' + producto.nombre + '</a></h3>' +
+        '<p>' + producto.descripcion_reducida + '</p>' +
+        '<p>' + producto.descripcion + '</p>' +
+        '<h4>$' + producto.precio + '</h4>' +
+        '<button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i></button>'
+        +`
+        <p><span id="nombre-${producto.id}">${producto.nombre}</span>
+            <input type="text" id="input-nombre-${producto.id}" style="display: none;">
+            <button onclick="editarCampo('nombre', ${producto.id})">Editar</button>
+            <button onclick="guardarCampo('nombre', ${producto.id})" style="display: none;">Guardar</button>
+        </p>
+        <p>Descripción: <span id="descripcion-${producto.id}">${producto.descripcion}</span>
+            <input type="text" id="input-descripcion-${producto.id}" style="display: none;">
+            <button onclick="editarCampo('descripcion', ${producto.id})">Editar</button>
+            <button onclick="guardarCampo('descripcion', ${producto.id})" style="display: none;">Guardar</button>
+        </p>
+        <p>Descripción-reducida: <span id="descripcion-reducida-${producto.id}">${producto.descripcion_reducida}</span>
+        <input type="text" id="input-descripcion-reducida-${producto.id}" style="display: none;">
+        <button onclick="editarCampo('descripcion-reducida', ${producto.id})">Editar</button>
+        <button onclick="guardarCampo('descripcion-reducida', ${producto.id})" style="display: none;">Guardar</button>
+    </p>
+        <p>Imagen: <span id="imagen-${producto.id}">${producto.imagen}</span>
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <input type="file" id="input-imagen-${producto.id}" style="display: none;">
+            <button onclick="editarCampo('imagen', ${producto.id})">Editar</button>
+            <button onclick="guardarCampo('imagen', ${producto.id})" style="display: none;">Guardar</button>
+        </p>`
+  ;
+      vistaMiniatura.innerHTML = contenido;
+      contenedorProductos.appendChild(vistaMiniatura);
+    });
+  } catch (error) {
+    console.error('Error al cargar el archivo JSON:', error);
+  }
+}
+
+
+
+
+
+
+
 async function mostrarVistasMiniatura(nombreCategoria) {
         
   try {

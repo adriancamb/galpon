@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Obtiene el nombre del archivo HTML actual
    var currentFile = window.location.pathname.split('/').pop();
-   console.log("currentFile:", currentFile)
+   //console.log("currentFile:", currentFile)
    // Remueve la extensión ".html" del nombre del archivo y Reemplaza los guiones ("-") por espacios en el nombre de la categoría
    var nombreCategoria = currentFile.slice(0, -5).replace(/-/g, ' ');
    const titulo = document.getElementById('pagina-titulo');
@@ -22,7 +22,7 @@ async function obtenerCategoriaDesdeURL() {
         
         var currentFile = rutaCategoriaObtenida.split('/').pop();
         var nombreCategoria = currentFile.slice(0, -5).replace(/-/g, ' ');
-        console.log("nombreCategoria:", nombreCategoria)
+       // console.log("nombreCategoria:", nombreCategoria)
         
         mostrarVistasMiniatura(nombreCategoria);
 

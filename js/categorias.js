@@ -17,7 +17,7 @@ fetch('/productos/categorias.json')
       linkCategoria.href = categoria.url;
       linkCategoria.dataset.bsToggle = 'dropdown';
       linkCategoria.setAttribute('aria-expanded', 'false');
-      linkCategoria.textContent = categoria.nombre;
+      linkCategoria.textContent = categoria.nombre_corto;
 
       // Crea la lista de productos para la categoría
       const listaproductos = document.createElement('ul');
@@ -29,7 +29,7 @@ fetch('/productos/categorias.json')
         const linkItem = document.createElement('a');
         linkItem.classList.add('dropdown-item');
         linkItem.href = item.url;
-        linkItem.textContent = item.nombre;
+        linkItem.textContent = item.nombre_corto;
         linkItem.setAttribute('target', '_self'); // Agrega el atributo target
 
         itemLista.appendChild(linkItem);
@@ -45,7 +45,7 @@ fetch('/productos/categorias.json')
             const subproductoLink = document.createElement('a');
             subproductoLink.classList.add('dropdown-item');
             subproductoLink.href = subproducto.url;
-            subproductoLink.textContent = subproducto.nombre;
+            subproductoLink.textContent = subproducto.nombre_corto;
             subproductoLink.setAttribute('target', '_self'); // Agrega el atributo target
 
             subproductoLista.appendChild(subproductoLink);
@@ -60,7 +60,7 @@ fetch('/productos/categorias.json')
                 const subsubproductoLink = document.createElement('a');
                 subsubproductoLink.classList.add('dropdown-item');
                 subsubproductoLink.href = subsubproducto.url;
-                subsubproductoLink.textContent = subsubproducto.nombre;
+                subsubproductoLink.textContent = subsubproducto.nombre_corto;
                 subsubproductoLink.setAttribute('target', '_self'); // Agrega el atributo target
 
                 subsubproductoLista.appendChild(subsubproductoLink);

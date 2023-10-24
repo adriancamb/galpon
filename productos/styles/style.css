@@ -97,3 +97,38 @@ a:hover {
   height: auto; 
 }
 
+/*Productos de categoria edit*/
+
+.vista-miniatura-edit {
+  padding: 10px;
+  width: 350px; 
+  height: auto; 
+  border: 2px solid orangered; 
+  border-radius: 15px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contenedor-productos-edit {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 5 columnas de ancho igual */
+  grid-gap: 10px; /* Espacio entre las vistas en miniatura */
+  padding-top: 20px;
+}
+
+.categorias-lista-edit {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 10px; /* Espacio entre las vistas en miniatura */
+  padding-top: 20px;
+  border: 2px solid blue; 
+  border-radius: 15px; 
+}
+
+.vista-miniatura-edit img {
+  width: 200px; /* Ancho deseado para la imagen en tamaño pequeño */
+  height: auto; 
+}
+

@@ -6,7 +6,7 @@ conn = sqlite3.connect('productos/galpon.db')
 c = conn.cursor()
 
 # Leer los datos de la tabla
-c.execute('SELECT id, nombre, url, imagen, id_padre, descripcion, destacado FROM categorias')
+c.execute('SELECT id, nombre, url, imagen, id_padre, descripcion, destacado, nombre_corto FROM categorias')
 categorias = c.fetchall()
 
 # Función para buscar las subcategorías de una categoría
@@ -20,7 +20,8 @@ def buscar_subcategorias(id_padre):
                 "url": categoria[2],
                 "imagen": categoria[3],
                 "descripcion": categoria[5],
-                "destacado": bool(categoria[6])
+                "destacado": bool(categoria[6]),
+                "nombre_corto": categoria[7]
             }
             subcategorias_hijas = buscar_subcategorias(categoria[0])
             if subcategorias_hijas:
@@ -38,7 +39,8 @@ for categoria in categorias:
             "url": categoria[2],
             "imagen": categoria[3],
             "descripcion": categoria[5],
-            "destacado": bool(categoria[6])
+            "destacado": bool(categoria[6]),
+            "nombre_corto": categoria[7]
         }
         subcategorias = buscar_subcategorias(categoria[0])
         if subcategorias:
